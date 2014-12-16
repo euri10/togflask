@@ -1,0 +1,6933 @@
+
+@charset "utf-8";
+@font-face {
+    font-family: "hind";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Hind Regular"), local("Hind-Regular"), url("http://webtoons.static.naver.net/fonts/hind_normal.eot?dt=2014120401") format("embedded-opentype"), url("http://webtoons.static.naver.net/fonts/hind_normal.woff?dt=2014111301") format("woff");
+}
+@font-face {
+    font-family: "hind_m";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Hind Medium"), local("Hind-Medium"), url("http://webtoons.static.naver.net/fonts/hind_medium.eot?dt=2014120401") format("embedded-opentype"), url("http://webtoons.static.naver.net/fonts/hind_medium.woff?dt=2014111301") format("woff");
+}
+html, body {
+    height: 100%;
+}
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+    margin: 0;
+    padding: 0;
+}
+body, input, textarea, select, button, table {
+    font-family: "hind","simhei",verdana,Helvetica,sans-serif;
+    font-size: 12px;
+}
+img, fieldset, button {
+    border: 0 none;
+}
+img {
+    vertical-align: top;
+}
+ul, ol, li {
+    list-style: outside none none;
+}
+em, address {
+    font-style: normal;
+}
+input, textarea {
+    outline: 0 none;
+}
+hr {
+    display: none;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+a:hover, a:active, a:focus {
+    text-decoration: none;
+}
+.blind {
+    font-size: 0;
+    height: 1px;
+    left: 0;
+    line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 1px;
+}
+table {
+    border: 0 none;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+table td, table th {
+    border: 0 none;
+}
+table th {
+    background: none repeat scroll 0 0 #eee;
+}
+caption {
+    font-size: 0;
+    height: 1px;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 1px;
+}
+label {
+    vertical-align: middle;
+}
+input[type="text"], input[type="password"], button, input[type="button"], input[type="reset"], input[type="image"], input[type="submit"], textarea {
+    border: 0 none;
+}
+textarea {
+    resize: none;
+}
+#u_skip {
+    position: relative;
+    z-index: 1000;
+}
+#u_skip a {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_u_skip.png?dt=2014120401") repeat-x scroll 0 -11px rgba(0, 0, 0, 0);
+    border: 1px solid #4ec53d;
+    left: 0;
+    outline: 0 none;
+    position: absolute;
+    text-align: center;
+    top: -30px;
+    width: 128px;
+}
+#u_skip a:active, #u_skip a:focus {
+    cursor: pointer;
+    text-decoration: none;
+    top: 0;
+}
+#u_skip span {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_u_skip.png?dt=2014120401") no-repeat scroll 100% 11px rgba(0, 0, 0, 0);
+    color: #fff;
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: -1px;
+    line-height: 26px;
+    padding: 2px 6px 0 0;
+}
+#wrap {
+    height: 100%;
+    min-width: 1240px;
+}
+#header {
+    background: none repeat scroll 0 0 #fff;
+    height: 100px;
+    margin-bottom: -100px;
+    position: relative;
+    z-index: 100;
+}
+#wrap.header_bdr #header {
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: -101px;
+}
+.header_inner {
+    margin: 0 auto;
+    max-width: 1580px;
+    position: relative;
+}
+.header_inner:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+#container {
+    min-height: 100%;
+    position: relative;
+}
+#container.bg {
+    background: none repeat scroll 0 0 #f5f5f5;
+}
+#content {
+    padding: 100px 0 271px;
+    position: relative;
+}
+#content.viewer {
+    padding-top: 0;
+    position: relative;
+}
+#footer {
+    background: none repeat scroll 0 0 #f5f5f5;
+    border-top: 1px solid #e5e5e5;
+    height: 270px;
+    margin-top: -271px;
+    position: relative;
+}
+.cont_box {
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+    z-index: 10;
+}
+.cont_box:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.cont_box.v2 {
+    margin-top: 77px;
+    width: 1120px;
+}
+.aside {
+    float: right;
+    width: 190px;
+}
+.main_spot {
+    width: 100%;
+}
+[class^="btn_"], [class^="ico_"], [class^="num_ranking"] {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_ico_v5.png?dt=2014120401") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    line-height: 999px;
+    overflow: hidden;
+    vertical-align: top;
+}
+.input_chk {
+    height: 28px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 28px;
+}
+.input_chk + label {
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.input_chk:focus {
+    outline: 1px dotted #000;
+}
+.input_txt {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #b4b4b4 !important;
+    border-radius: 20px !important;
+    color: #000;
+    font-family: "hind_m","simhel";
+    font-size: 16px;
+    height: 39px;
+    padding: 0 28px;
+}
+.input_txt:focus {
+    border: 1px solid #5cea36 !important;
+}
+.txtarea {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #b4b4b4 !important;
+    border-radius: 20px !important;
+    color: #000;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 28px;
+    vertical-align: top;
+}
+.txtarea:focus {
+    border: 1px solid #5cea36 !important;
+}
+.bar {
+    background: none repeat scroll 0 0 #d6d6d6;
+    display: inline-block;
+    height: 16px;
+    line-height: 999px;
+    overflow: hidden;
+    vertical-align: top;
+    width: 1px;
+}
+.thum_skin {
+    border: 1px solid #000;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.genre {
+    font-size: 14px;
+}
+.genre.g_fantasy {
+    color: #8901e1;
+}
+.genre.g_action {
+    color: #006afa;
+}
+.genre.g_drama {
+    color: #12c2ab;
+}
+.genre.g_romance {
+    color: #fd337f;
+}
+.genre.g_comedy {
+    color: #f7b307;
+}
+.genre.g_sports {
+    color: #00b4ff;
+}
+.genre.g_thriller {
+    color: #cb0055;
+}
+.genre.g_slice_of_life {
+    color: #a9bf40;
+}
+.genre.g_post_apocalypse {
+}
+.genre.g_historical {
+    color: #64442d;
+}
+.genre.g_heartwarming {
+    color: #fb6a01;
+}
+.grade_num {
+    color: #02ea37;
+    display: inline-block;
+    font-family: "verdana";
+    font-size: 14px;
+    height: 16px;
+    line-height: 17px;
+    margin-left: 3px;
+    vertical-align: top;
+}
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.select1 {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #b4b4b4;
+    border-radius: 20px;
+}
+.select1 .selected {
+    display: block;
+    font-family: "hind_m","simhei";
+    font-size: 16px;
+    height: 39px;
+    line-height: 43px;
+    padding-left: 28px;
+    position: relative;
+}
+.select1 .selected .ico_arr5 {
+    position: absolute;
+    right: 25px;
+    top: 16px;
+}
+.select1 .selected.open .ico_arr5 {
+    background-position: -400px -230px;
+}
+.select1 .ly_select {
+    border-top: 1px solid #f0f0f0;
+    display: none;
+    margin-top: 1px;
+    padding: 15px 0 13px;
+}
+.select1 .ly_select a {
+    color: #878787;
+    display: block;
+    font-size: 16px;
+    height: 31px;
+    line-height: 31px;
+    padding-left: 28px;
+}
+.select1 .ly_select a:hover {
+    background: none repeat scroll 0 0 #f3f3f3;
+}
+.btn_logo {
+    background-position: 0 0;
+    height: 75px;
+    width: 77px;
+}
+.btn_search {
+    background-position: -320px 0;
+    height: 33px;
+    width: 33px;
+}
+.btn_search:hover {
+    background-position: -280px -290px;
+}
+.btn_mainspot_more {
+    background-position: -100px -40px;
+    height: 44px;
+    width: 189px;
+}
+.btn_delete {
+    background-position: -370px -70px;
+    height: 16px;
+    width: 16px;
+}
+.btn_delete3 {
+    background-position: -440px -110px;
+    height: 9px;
+    width: 9px;
+}
+.btn_delete4 {
+    background-position: -430px -230px;
+    height: 9px;
+    width: 9px;
+}
+.btn_chk {
+    background-position: -360px -250px;
+    height: 35px;
+    width: 35px;
+}
+.btn_top {
+    background-position: -450px -240px;
+    height: 49px;
+    width: 50px;
+}
+.btn_modify {
+    background-position: -440px -90px;
+    height: 10px;
+    width: 10px;
+}
+.btn_episode_fd {
+    background-position: 0 -330px;
+    height: 25px;
+    width: 84px;
+}
+.btn_bx {
+    background-position: -280px -190px;
+    height: 33px;
+    width: 88px;
+}
+.btn_lineset {
+    background-position: -50px -430px;
+    height: 33px;
+    width: 61px;
+}
+.btn_lineset.on {
+    background-position: -120px -430px;
+}
+.btn_clse {
+    background-position: -380px -170px;
+    height: 18px;
+    width: 19px;
+}
+.btn_facebook {
+    background-position: -250px -360px;
+    height: 73px;
+    width: 74px;
+}
+.btn_twitter {
+    background-position: -330px -360px;
+    height: 73px;
+    width: 74px;
+}
+.btn_weibo {
+    background-position: 0 -640px;
+    height: 73px;
+    width: 74px;
+}
+.btn_line {
+    background-position: -410px -360px;
+    height: 73px;
+    width: 74px;
+}
+.btn_bgm_stop {
+    background-position: -180px -760px;
+    height: 28px;
+    width: 25px;
+}
+.btn_bgm_stop.on, .btn_bgm_stop:hover {
+    background-position: -180px -790px;
+}
+.btn_bgm_pause {
+    background-position: -205px -760px;
+    height: 28px;
+    width: 25px;
+}
+.btn_bgm_pause.on, .btn_bgm_pause:hover {
+    background-position: -205px -790px;
+}
+.btn_bgm_play {
+    background-position: -230px -760px;
+    height: 28px;
+    width: 26px;
+}
+.btn_bgm_play.on, .btn_bgm_play:hover {
+    background-position: -230px -790px;
+}
+.btn_app_and {
+    background-position: -220px -530px;
+    height: 17px;
+    width: 92px;
+}
+.btn_app_ios {
+    background-position: -320px -530px;
+    height: 17px;
+    width: 60px;
+}
+.btn_app_free {
+    background-position: -320px -720px;
+    height: 16px;
+    width: 91px;
+}
+.btn_copyright {
+    background-position: -360px -510px;
+    height: 15px;
+    width: 94px;
+}
+.btn_ly_close {
+    background-position: -450px -220px;
+    height: 18px;
+    width: 19px;
+}
+.ico_n1 {
+    background-position: 0 -600px;
+    height: 24px;
+    width: 11px;
+}
+.ico_n1_big {
+    background-position: -250px -190px;
+    height: 41px;
+    width: 14px;
+}
+.ico_n2 {
+    background-position: -20px -600px;
+    height: 24px;
+    width: 17px;
+}
+.ico_n3 {
+    background-position: -40px -600px;
+    height: 24px;
+    width: 16px;
+}
+.ico_n4 {
+    background-position: -60px -600px;
+    height: 24px;
+    width: 18px;
+}
+.ico_n5 {
+    background-position: -80px -600px;
+    height: 24px;
+    width: 16px;
+}
+.ico_n6 {
+    background-position: -100px -600px;
+    height: 24px;
+    width: 17px;
+}
+.ico_n7 {
+    background-position: -120px -600px;
+    height: 24px;
+    width: 16px;
+}
+.ico_n8 {
+    background-position: -140px -600px;
+    height: 24px;
+    width: 17px;
+}
+.ico_n9 {
+    background-position: -160px -600px;
+    height: 24px;
+    width: 17px;
+}
+.ico_n10 {
+    background-position: -180px -600px;
+    height: 24px;
+    width: 31px;
+}
+.ico_chal_n1 {
+    background-position: 0 -720px;
+    height: 33px;
+    width: 14px;
+}
+.ico_chal_n2 {
+    background-position: -30px -720px;
+    height: 33px;
+    width: 21px;
+}
+.ico_chal_n3 {
+    background-position: -60px -720px;
+    height: 33px;
+    width: 21px;
+}
+.ico_chal_n4 {
+    background-position: -90px -720px;
+    height: 33px;
+    width: 24px;
+}
+.ico_chal_n5 {
+    background-position: -120px -720px;
+    height: 33px;
+    width: 21px;
+}
+.ico_chal_n6 {
+    background-position: -150px -720px;
+    height: 33px;
+    width: 23px;
+}
+.ico_chal_n7 {
+    background-position: -180px -720px;
+    height: 33px;
+    width: 22px;
+}
+.ico_chal_n8 {
+    background-position: -210px -720px;
+    height: 33px;
+    width: 21px;
+}
+.ico_chal_n9 {
+    background-position: -240px -720px;
+    height: 33px;
+    width: 23px;
+}
+.ico_chal_n10 {
+    background-position: -270px -720px;
+    height: 33px;
+    width: 42px;
+}
+.ico_footlogo {
+    background-position: -300px -40px;
+    height: 47px;
+    width: 47px;
+}
+.ico_favorites {
+    background-position: 0 -290px;
+}
+.ico_favorites.on {
+    background-position: -460px -150px;
+}
+.ico_facebook {
+    background-position: -390px 0;
+    height: 23px;
+    width: 23px;
+}
+.ico_twitter {
+    background-position: -360px 0;
+    height: 23px;
+    width: 23px;
+}
+.ico_weibo {
+    background-position: -470px 0;
+    height: 23px;
+    width: 23px;
+}
+.ico_copy {
+    background-position: -120px -290px;
+}
+.ico_line {
+    background-position: -420px 0;
+    height: 23px;
+    width: 23px;
+}
+.ico_line2 {
+    background-position: 0 -430px;
+    height: 44px;
+    width: 43px;
+}
+.ico_weibo2 {
+    background-position: -80px -640px;
+    height: 44px;
+    width: 43px;
+}
+.ico_search {
+    background-position: -350px -70px;
+    height: 12px;
+    width: 12px;
+}
+.ico_search2 {
+    background-position: -450px -20px;
+    height: 14px;
+    width: 14px;
+}
+.ico_mywebtoon {
+    background-position: -350px -40px;
+    height: 21px;
+    width: 23px;
+}
+.ico_login {
+    background-position: -450px -40px;
+    height: 22px;
+    width: 22px;
+}
+.ico_grade {
+    background-position: 0 -90px;
+    height: 9px;
+    width: 45px;
+}
+.ico_grade2 {
+    background-position: -440px -70px;
+    height: 17px;
+    width: 18px;
+}
+.ico_grade3 {
+    background-position: -400px -90px;
+    height: 13px;
+    width: 14px;
+}
+.ico_grade4 {
+    background-position: -420px -90px;
+    height: 11px;
+    width: 12px;
+}
+.ico_round_left {
+    background-position: -100px -40px;
+    height: 40px;
+    width: 18px;
+}
+.ico_round_right {
+    background-position: -130px -40px;
+    height: 40px;
+    width: 18px;
+}
+.ico_bigban_prev {
+    background-position: -380px -40px;
+    height: 24px;
+    width: 15px;
+}
+.ico_bigban_next {
+    background-position: -400px -40px;
+    height: 24px;
+    width: 15px;
+}
+.ico_arr1 {
+    background-position: -390px -70px;
+    height: 13px;
+    width: 7px;
+}
+.ico_arr.v3 {
+    background-position: -420px -110px;
+    width: 17px;
+}
+.ico_arr2 {
+    background-position: -410px -170px;
+    height: 11px;
+    width: 7px;
+}
+.ico_arr3 {
+    background-position: -420px -170px;
+    height: 13px;
+    width: 7px;
+}
+.ico_arr4 {
+    background-position: -430px -170px;
+    height: 9px;
+    width: 7px;
+}
+.ico_arr5 {
+    background-position: -380px -230px;
+    height: 7px;
+    width: 12px;
+}
+.ico_arr6 {
+    background-position: -420px -230px;
+    height: 10px;
+    width: 6px;
+}
+.ico_chk {
+    background-position: -400px -70px;
+    height: 11px;
+    width: 12px;
+}
+.ico_chk2 {
+    background-position: -420px -70px;
+    height: 11px;
+    width: 12px;
+}
+.ico_chk3 {
+    background-position: -420px -140px;
+    height: 27px;
+    width: 27px;
+}
+.ico_favorite {
+    background-position: 0 -250px;
+    height: 36px;
+    width: 35px;
+}
+.ico_like {
+    background-position: -360px -90px;
+    height: 14px;
+    width: 16px;
+}
+.ico_like.on {
+    background-position: -380px -90px;
+}
+.ico_empty_dash {
+    background-image: url("http://webtoons.static.naver.net/image/pc/sp_nodata_v2.png?dt=2014120401");
+    background-position: 0 0;
+    height: 198px;
+    width: 204px;
+}
+.ico_empty_fav {
+    background-image: url("http://webtoons.static.naver.net/image/pc/sp_nodata_v2.png?dt=2014120401");
+    background-position: -220px 0;
+    height: 198px;
+    width: 204px;
+}
+.ico_nosearch {
+    background-image: url("http://webtoons.static.naver.net/image/pc/sp_nodata_v2.png?dt=2014120401");
+    background-position: 0 -220px;
+    height: 198px;
+    width: 204px;
+}
+.ico_nochallenge {
+    background-image: url("http://webtoons.static.naver.net/image/pc/sp_nodata_v2.png?dt=2014120401");
+    background-position: -220px -220px;
+    height: 104px;
+    width: 183px;
+}
+.ico_lang_arr {
+}
+.ico_recently {
+    background-position: -470px -190px;
+    height: 25px;
+    width: 8px;
+}
+.ico_bgm {
+    background-position: -440px -170px;
+    height: 11px;
+    width: 12px;
+}
+.ico_pub_arr {
+    background-position: -330px -440px;
+    height: 67px;
+    width: 35px;
+}
+.ico_pub01 {
+    background-position: -240px -440px;
+    height: 35px;
+    width: 35px;
+}
+.ico_pub02 {
+    background-position: -280px -440px;
+    height: 35px;
+    width: 35px;
+}
+.ico_bar {
+    background-position: -450px -200px;
+    height: 13px;
+    width: 7px;
+}
+.ico_chkbox {
+    background-position: -370px -440px;
+    height: 28px;
+    width: 28px;
+}
+.ico_chkbox.on {
+    background-position: -410px -440px;
+}
+.ico_chkbox2 {
+    background-position: -370px -470px;
+    height: 28px;
+    width: 28px;
+}
+.ico_chkbox2.on {
+    background-position: -410px -470px;
+}
+.ico_menu_new {
+    background-position: -130px -560px;
+    height: 19px;
+    top: 4px;
+    width: 33px;
+}
+.logo {
+    float: left;
+    height: 100px;
+}
+.logo .btn_logo {
+    margin: 13px 0 0 36px;
+}
+.sta {
+    position: absolute;
+    right: 39px;
+    top: 32px;
+}
+.sta .lk_publish {
+    background: none repeat scroll 0 0 #2f2f2f;
+    border-radius: 17px;
+    display: inline-block;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    vertical-align: top;
+    width: 104px;
+}
+.sta .lk_publish:hover {
+    background: none repeat scroll 0 0 #151515;
+}
+.sta .lk_publish span {
+    margin-top: 11px;
+}
+.sta .lk_login {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #b4b4b4;
+    border-radius: 17px;
+    display: inline-block;
+    height: 31px;
+    line-height: 33px;
+    margin-left: 4px;
+    text-align: center;
+    vertical-align: top;
+    width: 102px;
+}
+.sta .lk_login span {
+    margin-top: 11px;
+}
+.sta .login_wrap {
+    display: none;
+    margin-left: 4px;
+    position: relative;
+    vertical-align: top;
+}
+.sta .login_wrap.on {
+    display: inline-block;
+}
+.sta .login {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #b4b4b4;
+    border-radius: 17px;
+    color: #7f7f7f;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 31px;
+    margin-left: 4px;
+    padding: 0 27px 0 44px;
+    position: relative;
+}
+.sta .login em {
+    left: 6px;
+    position: absolute;
+    top: 4px;
+}
+.sta .bar {
+    margin: 9px 10px 0;
+}
+.search_area {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #b4b4b4;
+    border-radius: 17px;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 328px;
+}
+.search_area .input_box {
+    display: inline-block;
+    height: 25px;
+    padding: 6px 0 0 17px;
+    vertical-align: top;
+    width: 210px;
+}
+.search_area .input_search {
+    background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+    border: 0 none;
+    font-size: 14px;
+    width: 100%;
+}
+.search_area .search_dsc {
+    color: #d2d2d2;
+    font-size: 13px;
+    left: 20px;
+    position: absolute;
+    top: 6px;
+}
+.search_area .form_area {
+    height: 31px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.search_area .form_area .ico_search {
+    margin: 10px 2px 0 0;
+}
+.search_area .form_area .btn_delete {
+    margin-top: 7px;
+}
+.search_area .form_area .bar {
+    background: none repeat scroll 0 0 #b4b4b4;
+    height: 12px;
+    margin: 10px 9px 0 8px;
+}
+.search_area .form_area .lk_close {
+    display: inline-block;
+    height: 31px;
+    padding-right: 15px;
+    vertical-align: top;
+}
+.search_area .form_area .lk_close .txt_close {
+    margin-top: 10px;
+}
+.search_area .ly_autocomplete {
+    background: none repeat scroll 0 0 #fff;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+    border-top: 1px solid #f0f0f0;
+    text-align: left;
+}
+.search_area .ly_autocomplete .title {
+    color: #767676;
+    font-family: "hind_m","simhei";
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 17px;
+    margin: 17px 0 -4px;
+    padding-left: 17px;
+}
+.search_area .ly_autocomplete .autocomplete_foot {
+    line-height: 0;
+    padding: 10px 0 10px 17px;
+    position: relative;
+}
+.search_area .ly_autocomplete .autocomplete_foot .right {
+    position: absolute;
+    right: 20px;
+    top: 11px;
+}
+.search_area .lst_autocomplete li {
+    border-bottom: 1px solid #f0f0f0;
+}
+.search_area .lst_autocomplete li:hover, .search_area .lst_autocomplete li.on {
+    background: none repeat scroll 0 0 #f3f3f3;
+}
+.search_area .lst_autocomplete a {
+    color: #767676;
+    display: block;
+    height: 54px;
+    padding: 0 17px 0 60px;
+    position: relative;
+}
+.search_area .lst_autocomplete .pic {
+    left: 17px;
+    position: absolute;
+    top: 11px;
+}
+.search_area .lst_autocomplete .subj {
+    font-family: "hind_m","simhei";
+    font-size: 13px;
+    line-height: 15px;
+    overflow: hidden;
+    padding-top: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.search_area .lst_autocomplete strong {
+    color: #02ea37;
+    font-family: "hind_m","simhei";
+    font-weight: normal;
+}
+.search_area .lst_autocomplete .info {
+    font-size: 13px;
+    line-height: 15px;
+    padding-top: 4px;
+    white-space: nowrap;
+}
+.search_area .lst_autocomplete .info .author {
+    display: inline-block;
+    max-width: 103px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.search_area .lst_autocomplete .info .bar {
+    background: none repeat scroll 0 0 #bababa;
+    display: inline-block;
+    height: 8px;
+    line-height: 999px;
+    margin: 3px 4px 0;
+    overflow: hidden;
+    vertical-align: top;
+    width: 1px;
+}
+.search_area .lst_autocomplete .info .ico_grade4 {
+    margin-top: 1px;
+}
+.search_area .lst_autocomplete .info .grade_num {
+    font-size: 11px;
+    line-height: 13px;
+    margin-left: 2px;
+}
+.search_area .lst_autocomplete.creator {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 9px 0 10px;
+}
+.search_area .lst_autocomplete.creator li {
+    border-bottom: 0 none;
+}
+.search_area .lst_autocomplete.creator a {
+    height: 22px;
+    padding: 0 17px;
+}
+.search_area .lst_autocomplete.creator .info {
+    line-height: 22px;
+    padding: 0 !important;
+}
+.search_area .lst_autocomplete.creator .info .bar {
+    margin: 6px 5px 0;
+}
+.search_area .lst_autocomplete.creator .info .author {
+    font-family: "hind_m","simhei";
+    margin-right: 7px;
+    max-width: 86px;
+}
+.search_area .lst_autocomplete.creator .info .subj2 {
+    display: inline-block;
+    max-width: 86px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.search_area .lst_history {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 11px 0 4px;
+}
+.search_area .lst_history li {
+    height: 27px;
+    line-height: 27px;
+    overflow: hidden;
+    padding: 0 17px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.search_area .lst_history li:hover, .search_area .lst_history li.on {
+    background: none repeat scroll 0 0 #f3f3f3;
+}
+.search_area .lst_history a {
+    color: #767676;
+    font-size: 13px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.search_area .lst_history a strong {
+    color: #02ea37;
+    font-family: "hind_m","simhei";
+    font-weight: normal;
+}
+.lnb {
+    float: left;
+    margin: 20px 0 0 21px;
+    vertical-align: top;
+}
+.lnb li {
+    float: left;
+    position: relative;
+}
+.lnb li a {
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    height: 40px;
+    padding: 20px 16px 0;
+}
+.lnb li .ico_menu_new {
+    left: 50%;
+    margin-left: -16px;
+    position: absolute;
+}
+.snb_wrap {
+    background: none repeat scroll 0 0 #fff;
+    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
+    clear: both;
+    height: 67px;
+    position: relative;
+    text-align: center;
+    z-index: 20;
+}
+.snb_inner {
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+}
+.snb {
+    padding-right: 180px;
+}
+.snb.challenge {
+    display: inline-block;
+    padding: 0;
+}
+.snb:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.snb li {
+    float: left;
+    width: 10.4%;
+}
+.snb li.comp {
+    width: 16.8%;
+}
+.snb a {
+    color: #000;
+    cursor: pointer;
+    display: block;
+    font-size: 17px;
+    height: 38px;
+    padding-top: 29px;
+    text-align: center;
+}
+.snb li.on {
+    position: relative;
+    top: -1px;
+}
+.snb li.on a {
+    background: none repeat scroll 0 0 #28dc18;
+    color: #fff;
+    height: 39px;
+    padding-top: 30px;
+}
+.snb li.g_drama {
+    width: 115px;
+}
+.snb li.g_fantasy {
+    width: 115px;
+}
+.snb li.g_comedy {
+    width: 115px;
+}
+.snb li.g_action {
+    width: 115px;
+}
+.snb li.g_slice_of_life {
+    width: 145px;
+}
+.snb li.g_romance {
+    width: 115px;
+}
+.snb li.g_heartwarming {
+    width: 165px;
+}
+.snb li.g_thriller {
+    width: 115px;
+}
+.snb li.g_historical {
+    display: none;
+}
+.snb li.g_sports {
+    display: none;
+}
+.snb.challenge li.g_all {
+    width: 67px;
+}
+.snb.challenge li.g_drama {
+    width: 95px;
+}
+.snb.challenge li.g_fantasy {
+    width: 104px;
+}
+.snb.challenge li.g_comedy {
+    width: 105px;
+}
+.snb.challenge li.g_action {
+    width: 97px;
+}
+.snb.challenge li.g_slice_of_life {
+    width: 134px;
+}
+.snb.challenge li.g_romance {
+    width: 116px;
+}
+.snb.challenge li.g_heartwarming {
+    width: 160px;
+}
+.snb.challenge li.g_thriller {
+    width: 105px;
+}
+.snb.challenge li.g_historical {
+    display: block;
+    width: 122px;
+}
+.snb.challenge li.g_sports {
+    display: block;
+    width: 95px;
+}
+.snb.challenge li.g_others {
+    width: 98px;
+}
+.snb li.g_all.on a {
+    background: none repeat scroll 0 0 #373737;
+}
+.snb li.g_drama.on a {
+    background: none repeat scroll 0 0 #12c2ab;
+}
+.snb li.g_fantasy.on a {
+    background: none repeat scroll 0 0 #8901e1;
+}
+.snb li.g_comedy.on a {
+    background: none repeat scroll 0 0 #f7b307;
+}
+.snb li.g_action.on a {
+    background: none repeat scroll 0 0 #006afa;
+}
+.snb li.g_slice_of_life.on a {
+    background: none repeat scroll 0 0 #a9bf40;
+}
+.snb li.g_romance.on a {
+    background: none repeat scroll 0 0 #fd337f;
+}
+.snb li.g_heartwarming.on a {
+    background: none repeat scroll 0 0 #fb6a01;
+}
+.snb li.g_thriller.on a {
+    background: none repeat scroll 0 0 #cb0054;
+}
+.snb li.g_historical.on a {
+    background: none repeat scroll 0 0 #64442d;
+}
+.snb li.g_sports.on a {
+    background: none repeat scroll 0 0 #00b4ff;
+}
+.snb li.g_others.on a {
+    background: none repeat scroll 0 0 #373737;
+}
+.snb_sort {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 180px;
+}
+.snb_sort .bar {
+    background: none repeat scroll 0 0 #eaeaea;
+    height: 29px;
+    left: 0;
+    position: absolute;
+    top: 19px;
+}
+.snb_sort .checked {
+    display: block;
+    padding-right: 13px;
+    text-align: right;
+}
+.snb_sort .checked span {
+    margin-top: 28px;
+}
+.snb_sort .checked .ico_chk2 {
+    margin-left: 9px;
+}
+.snb_sort .sort_box {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #e4e4e4;
+    display: none;
+    left: 0;
+    padding: 14px 0 21px;
+    position: absolute;
+    top: -1px;
+    width: 178px;
+    z-index: 10;
+}
+.th .snb_sort {
+    width: 219px;
+}
+.th .snb_sort .sort_box {
+    width: 217px;
+}
+.snb_sort .sort_box li {
+    position: relative;
+    text-align: right;
+}
+.snb_sort .sort_box a {
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    padding-right: 36px;
+}
+.snb_sort .sort_box span {
+    margin-top: 14px;
+}
+.snb_sort .sort_box .ico_chk2 {
+    margin: 0;
+    position: absolute;
+    right: 12px;
+    top: 14px;
+}
+.snb_sort.search {
+    width: 280px;
+}
+.snb_sort.search .sort_box {
+    width: 278px;
+}
+.snb_wrap.my .snb, .snb_wrap.terms .snb {
+    display: inline-block;
+    padding: 0;
+    vertical-align: top;
+}
+.snb_wrap.my .snb li {
+    width: 190px !important;
+}
+.snb_wrap.terms .snb li {
+    width: 190px !important;
+}
+.th .snb_wrap.terms .snb li {
+    width: 230px !important;
+}
+.login_area {
+    text-align: center;
+}
+.loginbox, .ly_loginbox {
+    border-radius: 15px;
+    height: 264px;
+    margin: 0 auto;
+    position: relative;
+    width: 358px;
+}
+.login_area .logo {
+    float: none;
+    height: 109px;
+    margin-bottom: 28px;
+}
+.login_area .logo .btn_logo {
+    background-position: 0 -480px;
+    height: 109px;
+    margin: 0;
+    width: 113px;
+}
+.loginbox .loginbox_cont {
+    background: none repeat scroll 0 0 #fff;
+    height: 205px;
+}
+div[class*="loginbox"] .txt_login2 {
+    margin-top: 25px;
+}
+.login_area .bg_line, .ly_loginbox .bg_line {
+    background: none repeat scroll 0 0 #393939;
+    display: block;
+    height: 1px;
+    margin: 14px 0 20px;
+    width: 303px;
+}
+.login_area .bg_line, .ly_loginbox.bg_wh .bg_line {
+    background: none repeat scroll 0 0 #f1f1f1;
+}
+.login_wrap #content {
+    left: 50%;
+    margin: -241px 0 0 -179px;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+}
+.login_wrap #footer {
+    border: 0 none;
+    height: 52px;
+    margin: 0;
+    padding-top: 29px;
+}
+.login_wrap #footer .foot_menu {
+    margin: 0;
+}
+.login_wrap #footer .bg_line {
+    background: none repeat scroll 0 0 #e5e5e5;
+    display: block;
+    height: 1px;
+    margin: 5px auto 12px;
+    width: 50px;
+}
+.login_wrap #footer .copyright {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+.login_wrap.email #content {
+    margin: -237px 0 0 -223px;
+}
+.login_wrap.email .loginbox {
+    background: none repeat scroll 0 0 #fff;
+    height: 256px;
+    width: 446px;
+}
+.login_wrap.email .loginbox_cont {
+    height: auto;
+    padding: 0;
+}
+.login_wrap.email .loginbox_tx {
+    color: #010101;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    padding: 47px 0 13px;
+}
+.login_wrap.email .lk_area {
+    margin-top: 10px;
+}
+.recently_area {
+    background: url("http://webtoons.static.naver.net/image/pc/bg_recently.png?dt=2014120401") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translate(114px, 0px);
+    transition: all 0.3s ease 0s;
+    z-index: 200;
+}
+@media �screen {
+.recently_area {
+    right: -114px;
+}
+}
+.recently_area.unfd {
+    height: 100%;
+    right: 0;
+    top: 0;
+    transform: translate(0px, 0px);
+    width: 114px;
+}
+.recently_area .menu {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_ico_v5.png?dt=2014120401") no-repeat scroll -460px -440px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 156px;
+    margin-top: -78px;
+    position: absolute;
+    right: 114px;
+    top: 50%;
+    width: 40px;
+}
+.recently_area.unfd .menu {
+    width: 29px;
+}
+.recently_area [class*="_recently"] {
+    display: block !important;
+    margin: 0 auto;
+    position: relative;
+}
+.recently_area .txt_recently {
+    top: 24px;
+}
+.recently_area.unfd .txt_recently, .recently_area .ico_recently {
+    display: none !important;
+}
+.recently_area.unfd .ico_recently {
+    display: block !important;
+    left: 6px;
+    top: 66px;
+}
+.recently_area .recently_cont {
+    height: auto;
+    margin-top: -349px;
+    overflow: hidden;
+    padding: 0 22px;
+    position: relative;
+    top: 50%;
+    width: 70px;
+}
+.recently_area.unfd [class$="_line"] {
+    border-left: 1px solid #efefef;
+    height: 100%;
+    left: -1px;
+    position: absolute;
+    width: 1px;
+}
+.recently_area.unfd .lt_line {
+    bottom: 50%;
+    margin-bottom: 78px;
+}
+.recently_area.unfd .lb_line {
+    margin-top: 78px;
+    top: 50%;
+}
+.recently_cont .bar {
+    background: none repeat scroll 0 0 #e3deda;
+    height: 1px;
+    margin: 11px 0 21px;
+    width: 70px;
+}
+.recently_cont .detail_info {
+    display: block;
+}
+.recently_cont .thmb {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_ico_v5.png?dt=2014120401") no-repeat scroll -130px -480px rgba(0, 0, 0, 0);
+    display: block;
+    height: 74px;
+    width: 70px;
+}
+.recently_cont .info {
+    display: block;
+    height: 44px;
+    padding-top: 7px;
+}
+.recently_cont .subj {
+    color: #000;
+    display: block;
+    font-size: 16px;
+    line-height: 14px;
+    margin-bottom: -1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.recently_cont .episode {
+    color: #7a7a7a;
+    font-size: 14px;
+    line-height: 15px;
+}
+.paginate {
+    overflow: hidden;
+    text-align: center;
+}
+.paginate a, .paginate.v2 [class^="pg_"] {
+    color: #070707;
+    display: inline-block;
+    font-size: 15px;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin-left: 3px;
+    width: 32px;
+}
+.paginate a:first-child, .detail_body .paginate .pg_prev + a {
+    margin: 0;
+}
+.paginate a span.on {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_ico_v5.png?dt=2014120401") no-repeat scroll -460px -70px rgba(0, 0, 0, 0);
+    color: #fff;
+    display: block;
+    padding-top: 2px;
+}
+.paginate a[class^="pg_"] {
+    cursor: pointer;
+    margin: 0;
+}
+.paginate .off[class^="pg_"] {
+    display: none;
+}
+.paginate [class^="pg_"] em {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_ico_v5.png?dt=2014120401") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 10px;
+    line-height: 9999px;
+    margin-top: 10px;
+    overflow: hidden;
+    width: 6px;
+}
+.paginate .pg_prev em {
+    background-position: -400px -140px;
+}
+.paginate .pg_next em {
+    background-position: -410px -140px;
+}
+.ly_dim {
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 990;
+}
+.ly_dim.on {
+    display: block;
+}
+.ly_dim .bg {
+    background: none repeat scroll 0 0 #000;
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.ly_dim .bg.v2 {
+    opacity: 0.2;
+}
+.ly_dim .bg.v3 {
+    opacity: 0.5;
+}
+.ly_dim.on ~ .ly_wrap {
+    display: block;
+}
+.ly_wrap {
+    bottom: 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.ly_wrap.fixed {
+    position: fixed;
+}
+.ly_wrap .ly_img {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.ly_wrap.block {
+    height: 485px;
+    left: 50%;
+    margin: -244px 0 0 -189px;
+    top: 50%;
+    width: 378px;
+}
+.ly_wrap.block .ly_img {
+    background: url("http://webtoons.static.naver.net/image/pc/pop_siteblock.jpg?dt=2014111301") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 100%;
+    width: 100%;
+}
+.ly_wrap.block a {
+    height: 30px;
+    left: 104px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 316px;
+    width: 170px;
+}
+.ly_box {
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.ly_box .btn_ly_close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.ly_alignbox {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+}
+.ly_loginbox {
+    background: none repeat scroll 0 0 #2c2c2c;
+    display: none;
+    position: absolute;
+    right: 60px;
+    top: 50px;
+}
+.ly_loginbox.on {
+    display: block;
+}
+.ly_loginbox.bg_wh {
+    background: none repeat scroll 0 0 #fff;
+    display: inline-block;
+    position: relative;
+    right: auto;
+    top: auto;
+    vertical-align: middle;
+    z-index: 1000;
+}
+.ly_loginbox .loginbox_tab {
+    background: none repeat scroll 0 0 #363636;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+}
+.ly_loginbox .loginbox_tab li {
+    float: left;
+    position: relative;
+    width: 179px;
+}
+.ly_loginbox .loginbox_tab li a {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    height: 41px;
+    padding-top: 23px;
+    text-align: center;
+}
+.ly_loginbox .loginbox_tab .bar {
+    background: none repeat scroll 0 0 #484848;
+    height: 22px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 24px;
+}
+.ly_loginbox .loginbox_tab span {
+    display: inline-block;
+    vertical-align: top;
+}
+.ly_loginbox .loginbox_tab .ico_mywebtoon {
+    margin-right: 10px;
+}
+.ly_loginbox .loginbox_tab .ico_login {
+    margin-right: 9px;
+}
+.ly_loginbox .loginbox_tab [class^="txt_"] {
+    margin-top: 4px;
+}
+.ly_loginbox .ico_arr.v3 {
+    right: 43px;
+}
+.loginbox_cont {
+    border-radius: 15px;
+    padding: 28px 29px 31px;
+    text-align: center;
+}
+.ly_loginbox .loginbox_tab ~ .loginbox_cont {
+    border-top-left-radius: 0;
+    border-top-right-radius: 15px;
+    text-align: left;
+}
+.loginbox_cont .loginbox_tx {
+    color: #868686;
+    font-size: 15px;
+    line-height: 19px;
+    margin-top: 12px;
+    text-align: center;
+    white-space: nowrap;
+}
+.ly_loginbox .loginbox_tab ~ .loginbox_cont .loginbox_tx {
+    margin: 58px 0;
+}
+.ly_loginbox .txt_setting {
+    margin: 0 0 12px 7px;
+}
+.ly_loginbox .loginbox_tab ~ .loginbox_cont .txt_setting ~ .loginbox_tx {
+    margin: 0 7px;
+    text-align: left;
+}
+.ly_loginbox .loginbox_tab ~ .bg_line {
+    margin: 14px 0;
+}
+.login_set {
+    display: inline-block;
+    overflow: hidden;
+}
+.login_set li {
+    float: left;
+    height: 73px;
+    margin: 0 12px;
+    width: 74px;
+}
+.login_set li a {
+    display: block;
+}
+.ly_loginbox .line_set {
+    color: #868686;
+    font-size: 14px;
+    margin-left: 4px;
+    position: relative;
+}
+.ly_loginbox .line_set strong {
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+}
+.ly_loginbox .line_set .line_name {
+    display: block;
+    line-height: 8px;
+}
+.ly_loginbox .line_set [class^="ico_"] {
+    float: left;
+    margin: -1px 9px 0 0;
+}
+.ly_loginbox .line_set .btn_lineset {
+    cursor: pointer;
+    position: absolute;
+    right: 4px;
+    top: 8px;
+}
+.ly_loginbox .btn_clse {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.ly_area {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #b4b4b4;
+    border-radius: 7px;
+    display: none;
+    position: absolute;
+    white-space: nowrap;
+}
+.ly_area.on {
+    display: block;
+}
+.ly_area .ly_cont {
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+}
+.ly_area .ico_arr {
+    position: absolute;
+    width: 19px !important;
+}
+[class^="ly_"] .ico_arr {
+    height: 13px !important;
+    position: absolute;
+}
+[class^="ly_"] .ico_arr.up {
+    top: -13px;
+}
+.ly_area .ico_arr.dn {
+    background-position: -400px -110px;
+    bottom: -13px;
+}
+.ly_area .ico_arr.v2.up {
+    background-position: -480px -30px;
+    left: auto;
+    right: 112px;
+}
+.ly_area .ico_arr.v2.dn {
+    background-position: -480px -50px;
+}
+.ly_area .ly_btn {
+    margin: 7px auto 0;
+}
+.ly_area .btn_bx {
+    color: #000;
+    font-size: 15px;
+    line-height: 34px;
+    margin: 0 auto;
+}
+.ly_progress_dim {
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 990;
+}
+.ly_progress_dim.on {
+    display: block;
+}
+.ly_progress_dim .bg {
+    background: none repeat scroll 0 0 #000;
+    height: 100%;
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.ly_publish {
+    padding: 52px 0 55px;
+    width: 338px;
+}
+.ly_publish.v2 {
+    padding: 28px 0 27px;
+}
+.ly_publish p {
+    font-size: 18px;
+    line-height: 22px;
+}
+.ly_publish p.btnarea {
+    margin-top: 23px;
+}
+.ly_publish p.btnarea .btn1 {
+    background: none repeat scroll 0 0 #2f2f2f;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    height: 40px;
+    line-height: 44px;
+    text-align: center;
+    width: 110px;
+}
+.ly_publish p.progress {
+    margin-top: 12px;
+}
+.ly_publish p.progress .progress_bar {
+    background: none repeat scroll 0 0 #c4c9cb;
+    border-radius: 2px;
+    display: inline-block;
+    height: 5px;
+    vertical-align: middle;
+    width: 225px;
+}
+.ly_publish p.progress .progress_bar span {
+    background: none repeat scroll 0 0 #05ea38;
+    border-radius: 2px;
+    display: block;
+    height: 100%;
+}
+.ly_publish p.progress .num {
+    color: #9c9c9c;
+    display: inline-block;
+    font-family: "hind_m","simhei";
+    font-size: 16px;
+    line-height: 18px;
+    margin: 4px 0 0 6px;
+    vertical-align: middle;
+}
+.ly_publish p.progress .num strong {
+    color: #000;
+    font-weight: normal;
+}
+.ly_language {
+    width: 416px;
+}
+.ly_language h2 {
+    font-family: "hind_m","simhei";
+    font-size: 23px;
+    font-weight: normal;
+    line-height: 26px;
+    padding-top: 39px;
+    text-align: center;
+}
+.ly_language h3 {
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 22px;
+    padding-top: 3px;
+    text-align: center;
+}
+.ly_language .slt_language {
+    height: 161px;
+    margin: 28px 0 0 40px;
+    overflow: hidden;
+    text-align: left;
+}
+.ly_language .slt_language li {
+    float: left;
+    margin-bottom: 20px;
+    position: relative;
+    width: 178px;
+}
+.ly_language .slt_language .chk_wrap {
+    display: inline-block;
+    height: 47px;
+    position: relative;
+    vertical-align: middle;
+    width: 48px;
+}
+.ly_language .slt_language .chk_wrap input {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.ly_language .slt_language .chk_wrap input:focus {
+    outline: 1px dotted #000;
+}
+.ly_language .slt_language .chk_wrap .ico_lang {
+    height: 100%;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.ly_language .slt_language .chk_wrap .ico_lang .ico_lang_skin {
+    background-position: -450px -730px;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.ly_language .slt_language .chk_wrap .ico_lang.on .ico_lang_skin {
+    display: block;
+}
+.ly_language .slt_language .lang_th .ico_lang {
+    background-position: -260px -780px;
+}
+.ly_language .slt_language .lang_en .ico_lang {
+    background-position: -310px -780px;
+}
+.ly_language .slt_language .lang_cn .ico_lang {
+    background-position: -360px -780px;
+}
+.ly_language .slt_language .lang_tn .ico_lang {
+    background-position: -410px -780px;
+}
+.ly_language .slt_language label {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 11px;
+    vertical-align: middle;
+}
+.ly_language .slt_language .lang_cn label {
+    font-size: 18px;
+}
+.ly_language .slt_language .lang_tn label {
+    font-size: 18px;
+}
+.ly_language .lk_ok {
+    background: none repeat scroll 0 0 #000;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #fff;
+    display: block;
+    font-size: 24px;
+    height: 64px;
+    line-height: 64px;
+}
+.ly_chal_login {
+    padding: 46px 0 32px;
+    width: 418px;
+}
+.ly_chal_login .chal_login_dsc {
+    margin-left: 56px;
+    text-align: left;
+}
+.ly_chal_login .chal_login_dsc .chk_area {
+    display: inline-block;
+    height: 28px;
+    margin-right: 4px;
+    position: relative;
+    vertical-align: top;
+    width: 28px;
+}
+.ly_chal_login .chal_login_dsc .dsc {
+    color: #868686;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 6px;
+    vertical-align: top;
+}
+.ly_chal_login .chal_login_dsc .dsc a {
+    color: #02ea37;
+    text-decoration: underline;
+}
+.ly_chal_login .caution {
+    color: #ff5039;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 2px 0 3px 92px;
+    text-align: left;
+}
+.ly_chal_login .btnarea {
+    margin-top: 29px;
+}
+.ly_delete {
+    font-size: 17px;
+    padding: 13px 25px 16px;
+    text-align: center;
+    z-index: 1000;
+}
+.spi_area {
+    position: relative;
+    vertical-align: top;
+    z-index: 50;
+}
+.spi_area [class^="ico_"] {
+    height: 36px;
+    width: 35px;
+}
+.spi_area li {
+    float: left;
+    margin-left: 6px;
+}
+.spi_area li.relative {
+    position: relative;
+}
+.spi_area li:first-child {
+    margin: 0 !important;
+}
+.spi_area li .ly_area {
+    height: 22px;
+    padding: 15px 10px 17px 9px;
+}
+.spi_area li .ico_copy ~ .ly_area {
+    height: 45px;
+    top: -94px;
+}
+.spi_area li .ly_area .ico_arr {
+    left: 82px;
+}
+.spi_area .bx {
+    background: none repeat scroll 0 0 #ececec;
+    color: #585858;
+    cursor: pointer;
+    display: block;
+    font-family: "hind_m","simhei";
+    font-size: 15px;
+    height: 30px;
+    margin: 0 17px 0 18px;
+    min-width: 64px;
+    padding-top: 8px;
+    position: relative;
+}
+.spi_area .bx [class^="btn_"] {
+    height: 38px;
+    position: absolute;
+    top: 0;
+    width: 18px;
+    z-index: 20;
+}
+.spi_area .bx .btn_lft {
+    background-position: -280px -140px;
+    left: -18px;
+}
+.spi_area .bx .btn_rgt {
+    background-position: -327px -140px;
+    right: -18px;
+}
+.spi_area .tx_area {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    z-index: 30;
+}
+.spi_area .tx_area [class^="ico_"] {
+    margin: 4px 2px 0 0;
+}
+.spi_area .ico_like {
+    background-position: -360px -110px;
+    height: 14px !important;
+    margin-right: 4px !important;
+    width: 16px !important;
+}
+.spi_area .ico_like.on {
+    background-position: -380px -110px;
+}
+.go_top {
+    bottom: 40px;
+    height: 49px;
+    overflow: hidden;
+    position: fixed;
+    right: 37px;
+    width: 50px;
+    z-index: 100;
+}
+.foot_app {
+    padding-top: 33px;
+    text-align: center;
+}
+.foot_app .foot_logo, .foot_app a {
+    display: inline-block;
+    vertical-align: top;
+}
+.foot_app a {
+    font-size: 16px;
+    margin: 15px 0 0 19px;
+}
+.foot_menu {
+    margin-top: 24px;
+    text-align: center;
+}
+.foot_menu li {
+    display: inline-block;
+    height: 15px;
+    vertical-align: top;
+}
+.foot_menu a {
+    font-size: 16px;
+}
+.foot_menu .bar {
+    margin: 0 16px;
+}
+.language {
+    margin-top: -7px;
+    position: relative;
+}
+.language a {
+    cursor: pointer;
+}
+.language .lk_lang {
+    background: none repeat scroll 0 0 #f5f5f5;
+    border: 1px solid #b4b4b4;
+    border-radius: 14px;
+    display: block;
+    height: 26px;
+    position: relative;
+    text-align: left;
+    width: 100px;
+}
+.language .lk_lang span {
+    margin: 7px 0 0 12px;
+}
+.language .lk_lang .ico_lang_arr {
+    background-position: -360px -170px;
+    height: 5px;
+    margin: 0;
+    position: absolute;
+    right: 9px;
+    top: 11px;
+    width: 8px;
+}
+.language .lk_lang .btn_lang_en {
+    background-position: -220px -560px;
+    height: 15px;
+    width: 44px;
+}
+.language .lk_lang .btn_lang_tw {
+    background-position: -310px -560px;
+    height: 12px;
+    width: 55px;
+}
+.language .lk_lang .btn_lang_cn {
+    background-position: -220px -600px;
+    height: 12px;
+    width: 55px;
+}
+.language .lk_lang .btn_lang_th {
+    background-position: -310px -600px;
+    height: 16px;
+    margin: 4px 0 0 12px !important;
+    width: 50px;
+}
+.language .ly_lang {
+    background: none repeat scroll 0 0 #f5f5f5;
+    border: 1px solid #b4b4b4;
+    border-radius: 14px;
+    display: none;
+    left: 0;
+    padding: 3px 0;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 100px;
+}
+.language .ly_lang li, .language .ly_lang a {
+    display: block;
+    height: 21px;
+}
+.language .ly_lang span {
+    margin: 4px 0 0 12px;
+}
+.copyright {
+    border-top: 1px solid #e5e5e5;
+    color: #c7c7c7;
+    margin-top: 33px;
+    padding-top: 18px;
+    text-align: center;
+}
+.language .ly_lang .btn_lang_en {
+    background-position: -220px -560px;
+    height: 15px;
+    width: 77px;
+}
+.language .ly_lang .btn_lang_tw {
+    background-position: -310px -560px;
+    height: 12px;
+    width: 77px;
+}
+.language .ly_lang .btn_lang_cn {
+    background-position: -220px -600px;
+    height: 12px;
+    width: 77px;
+}
+.language .ly_lang .btn_lang_th {
+    background-position: -310px -600px;
+    height: 16px;
+    margin: 0 0 0 12px;
+    width: 79px;
+}
+.language .ly_lang .on .btn_lang_en {
+    background-position: -220px -580px;
+}
+.language .ly_lang .on .btn_lang_tw {
+    background-position: -310px -580px;
+}
+.language .ly_lang .on .btn_lang_cn {
+    background-position: -220px -620px;
+}
+.language .ly_lang .on .btn_lang_th {
+    background-position: -310px -620px;
+}
+.main_spot {
+    background: none repeat scroll 0 0 #5aa8be;
+    padding-bottom: 25px;
+}
+.main_spot .more_area {
+    margin-top: 9px;
+    position: relative;
+    text-align: center;
+    z-index: 20;
+}
+.main_spot .more_area a {
+    line-height: 44px;
+}
+.main_spot .more_area span {
+    vertical-align: middle;
+}
+.daily_tab_wrap {
+    padding: 31px 0 18px;
+    text-align: center;
+}
+.daily_tab {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+}
+.daily_tab li {
+    float: left;
+    margin: 0 3px;
+}
+.daily_tab li .btn_daily {
+    background-position: -9999px -9999px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 100px;
+}
+.daily_tab li .btn_daily span {
+    height: 15px;
+    margin-top: 12px;
+}
+.daily_tab li .btn_daily.wide {
+    width: 160px;
+}
+.daily_tab li.on .btn_daily {
+    background-position: 0 -140px;
+}
+.daily_tab li.on .btn_daily.wide {
+    background-position: -110px -140px;
+}
+.big_banner_wrap {
+    height: 130px;
+}
+.big_banner {
+    position: absolute;
+    width: 100%;
+}
+.big_banner .inner {
+    height: 130px;
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+}
+.big_banner .inner a {
+    display: block;
+}
+.big_banner .inner img {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+}
+.bigban_prev, .bigban_next {
+    background: url("http://webtoons.static.naver.net/image/pc/blank.gif?dt=2014120401") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 100%;
+    left: -25px;
+    position: absolute;
+    top: 0;
+    width: 85px;
+    z-index: 20;
+}
+.bigban_next {
+    left: auto;
+    right: -25px;
+}
+.big_banner .inner .ico_bigban_prev, .big_banner .inner .ico_bigban_next {
+    margin: 53px 0 0 35px;
+}
+.big_banner .bigban_prev:hover .ico_bigban_prev {
+    background-position: -320px -290px;
+}
+.big_banner .bigban_next:hover .ico_bigban_next {
+    background-position: -340px -290px;
+}
+.card_lst {
+    margin: 0 auto;
+    padding-left: 15px;
+    width: 1125px;
+}
+.card_lst:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.card_lst li {
+    float: left;
+    height: 210px;
+    margin: 0 15px 15px 0;
+    position: relative;
+    width: 210px;
+}
+.card_lst li.card_multi {
+    width: 435px;
+}
+.card_lst li.card_multi .info {
+    left: 21px;
+    width: 393px;
+}
+.card_lst li.card_multi .ellipsis_wrap {
+    max-height: 76px;
+    overflow: hidden;
+}
+.card_lst li.card_multi .subj {
+    color: #fff;
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 19px;
+    width: auto;
+}
+.card_lst li.card_multi .card_front .summary {
+    color: #fff;
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 8px;
+    width: 250px;
+}
+.card_lst li.card_multi .card_front .grade_area {
+    margin-top: 9px;
+}
+.card_lst li.card_multi .card_front .genre {
+    bottom: 20px;
+    left: 21px;
+}
+.card_lst .btn_chk {
+    bottom: 10px;
+    position: absolute;
+    right: 10px;
+}
+.card_lst.my li.on .btn_chk {
+    background-position: -400px -250px;
+}
+.card_lst.my li.on .chk_border {
+    border: 2px solid #28dc18;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+.main_spot .card_lst {
+    display: none;
+}
+.main_spot .card_lst li {
+    opacity: 0;
+}
+.main_spot .card_lst.on {
+    display: block;
+}
+.main_spot .card_lst.on li {
+    animation: 0.3s ease 0s normal both 1 running card_lst_ani;
+    opacity: 1;
+}
+.main_spot .card_lst.on li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.main_spot .card_lst.on li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.main_spot .card_lst.on li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.main_spot .card_lst.on li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.main_spot .card_lst.on li:nth-child(5) {
+    animation-delay: 0.5s;
+}
+.main_spot .card_lst.on li:nth-child(6) {
+    animation-delay: 0.6s;
+}
+.main_spot .card_lst.on li:nth-child(7) {
+    animation-delay: 0.7s;
+}
+.main_spot .card_lst.on li:nth-child(8) {
+    animation-delay: 0.8s;
+}
+.main_spot .card_lst.on li:nth-child(9) {
+    animation-delay: 0.9s;
+}
+.main_spot .card_lst.on li:nth-child(10) {
+    animation-delay: 1s;
+}
+@keyframes card_lst_ani {
+0% {
+    opacity: 0;
+    transform: translate(0px, 10px);
+}
+100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+}
+.card_item {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.card_item .card_front, .card_item .card_back {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+}
+.card_item .card_front {
+    opacity: 1;
+    z-index: 10;
+}
+.card_item .card_back {
+    opacity: 0;
+}
+.card_item:hover .card_front {
+    opacity: 0;
+}
+.card_item:hover .card_back {
+    opacity: 1;
+    z-index: 20;
+}
+.card_item .info {
+    height: 178px;
+    left: 18px;
+    position: absolute;
+    top: 19px;
+    width: 174px;
+}
+.card_item .info .subj {
+    font-family: "hind_m","simhei";
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 18px;
+    width: 162px;
+}
+.card_item .info .author {
+    font-family: "hind_m","simhei";
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 4px;
+}
+.card_item .info .grade_area {
+    height: 17px;
+    margin: 3px 0 0 -1px;
+}
+.card_item .info .icon_area {
+    margin: 9px 0 0 -2px;
+}
+.card_item .info .icon_area span {
+    margin-right: 3px;
+}
+.card_item .info .num {
+    color: #848484;
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 8px;
+}
+.card_item .genre {
+    bottom: 15px;
+    left: 18px;
+    line-height: 16px;
+    position: absolute;
+}
+.card_item .update {
+    bottom: 14px;
+    color: #848484;
+    font-size: 14px;
+    left: 19px;
+    line-height: 18px;
+    position: absolute;
+}
+.card_item .card_back .info {
+    color: #fff;
+    overflow: hidden;
+    top: 14px;
+}
+.card_item .card_back .info .subj {
+    padding-top: 5px;
+}
+.card_item .card_back .info .author {
+    font-size: 13px;
+    margin-top: 5px;
+    padding: 0;
+}
+.card_item .card_back .info .summary {
+    font-size: 13px;
+    line-height: 15px;
+}
+.card_item .card_back .info .line {
+    background: none repeat scroll 0 0 #fff;
+    display: block;
+    height: 1px;
+    margin: 12px 0 15px;
+    opacity: 0.5;
+    width: 16px;
+}
+.card_item .card_back.g_fantasy {
+    background: none repeat scroll 0 0 #8901e1;
+}
+.card_item .card_back.g_action {
+    background: none repeat scroll 0 0 #006afb;
+}
+.card_item .card_back.g_drama {
+    background: none repeat scroll 0 0 #12c2ab;
+}
+.card_item .card_back.g_romance {
+    background: none repeat scroll 0 0 #fd337f;
+}
+.card_item .card_back.g_comedy {
+    background: none repeat scroll 0 0 #ffc300;
+}
+.card_item .card_back.g_sports {
+    background: none repeat scroll 0 0 #00b4ff;
+}
+.card_item .card_back.g_thriller {
+    background: none repeat scroll 0 0 #cb0055;
+}
+.card_item .card_back.g_slice_of_life {
+    background: none repeat scroll 0 0 #a9bf40;
+}
+.card_item .card_back.g_post_apocalypse {
+}
+.card_item .card_back.g_historical {
+    background: none repeat scroll 0 0 #64442d;
+}
+.card_item .card_back.g_heartwarming {
+    background: none repeat scroll 0 0 #fb6a01;
+}
+.card_wrap {
+    margin: 0 auto;
+    padding: 50px 0 81px;
+    width: 1140px;
+}
+.card_wrap.genre {
+    padding: 18px 0 85px;
+}
+.card_wrap.all {
+    padding: 9px 0 65px;
+}
+.card_wrap .sub_title {
+    height: 29px;
+    padding: 28px 0 0 15px;
+}
+.card_wrap.my {
+    padding: 0 0 76px;
+}
+.card_wrap.my .sub_title_wrap {
+    height: 77px;
+    position: relative;
+}
+.card_wrap.my .sub_title {
+    font-size: 22px;
+    font-weight: normal;
+    padding: 48px 0 0 15px;
+}
+.card_wrap.my .sub_title.v2 {
+    padding: 25px 0 0 15px;
+}
+.card_wrap.my .right {
+    position: absolute;
+    right: 11px;
+    top: 22px;
+}
+.card_wrap.my .right a {
+    vertical-align: top;
+}
+.card_wrap.my .right .lk_select_all {
+    color: #767676;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 4px 9px 0 0;
+}
+.card_wrap.my .right .lk_select_all .txt_selectall {
+    margin: 7px 0 0 1px;
+}
+.card_wrap.my .right .ico_chk3 {
+    margin-right: 7px;
+}
+.card_wrap.my .right .bar {
+    margin: 9px 11px;
+}
+.card_wrap.my .paginate {
+    margin-top: 4px;
+}
+.card_wrap.my .card_nodata {
+    margin-bottom: 8px;
+    text-align: center;
+}
+.card_wrap.my .card_nodata h3 {
+    font-size: 21px;
+    font-weight: normal;
+    line-height: 23px;
+    margin-top: 24px;
+}
+.card_wrap.my .card_nodata .dsc {
+    color: #5f5f5f;
+    font-size: 17px;
+    line-height: 23px;
+    margin-top: 7px;
+}
+.card_wrap.my .card_nodata .dsc.v2 {
+    margin-top: 10px;
+}
+.card_wrap.my .card_nodata .ico_empty_fav {
+    margin-top: 55px;
+}
+.card_wrap.my .card_nodata .ico_empty_dash {
+    margin-top: 55px;
+}
+.card_wrap.my .card_nodata .txt_btn_create2 {
+    margin: 32px 0 7px;
+}
+.card_wrap.my .right .lk_select_all, .card_wrap.my .right .txt_btn_delete, .card_wrap.my .right span.bar, .card_wrap.my .right .txt_btn_cancel {
+    display: none;
+}
+.card_wrap.my.edit_mode .right .txt_btn_edit {
+    display: none;
+}
+.card_wrap.my.edit_mode .right .lk_select_all, .card_wrap.my.edit_mode .right .txt_btn_delete, .card_wrap.my.edit_mode .right span.bar, .card_wrap.my.edit_mode .right .txt_btn_cancel {
+    display: inline-block;
+}
+.card_wrap.my .card_lst .btn_chk {
+    display: none;
+}
+.card_wrap.my.edit_mode .card_lst .btn_chk {
+    display: inline-block;
+}
+.card_wrap.my .card_item {
+    overflow: hidden;
+}
+.card_wrap.publish {
+    padding: 0 0 249px;
+}
+.card_wrap.publish .sub_title_wrap {
+    height: 75px;
+    position: relative;
+}
+.card_wrap.publish .sub_title {
+    font-size: 22px;
+    font-weight: normal;
+    padding: 43px 0 0 15px;
+}
+.card_wrap.publish .right {
+    position: absolute;
+    right: 11px;
+    top: 30px;
+}
+.card_wrap.publish .right a {
+    vertical-align: top;
+}
+.card_wrap.search {
+    padding: 42px 0 69px;
+}
+.card_wrap.search .search_result {
+    font-family: "hind_m","simhei";
+    font-size: 17px;
+    font-weight: normal;
+    height: 36px;
+    margin-top: 27px;
+    padding-left: 14px;
+}
+.card_wrap.search .card_nodata {
+    margin: 46px 0 9px;
+    text-align: center;
+}
+.card_wrap.search .card_nodata .dsc {
+    color: #5f5f5f;
+    font-size: 17px;
+    line-height: 27px;
+    margin-top: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card_wrap.search .card_nodata .dsc span {
+    color: #000;
+    font-family: "hind_m","simhei";
+}
+.card_wrap.search .more_area {
+    padding: 6px 15px 0 0;
+    text-align: right;
+}
+.card_wrap.search .more_area a {
+    color: #7f7f7f;
+    font-size: 17px;
+    line-height: 19px;
+}
+.card_wrap.search .more_area span {
+    margin: 5px 0 0 4px;
+}
+.ranking_lst {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1200px;
+}
+.ranking_lst.main {
+    padding: 53px 0 70px;
+}
+.ranking_lst.top {
+    padding: 33px 0 115px;
+}
+.ranking_lst.my {
+    padding: 50px 0 112px;
+}
+.ranking_lst.search {
+    padding: 58px 0 90px;
+}
+.ranking_lst .title_area {
+    height: 34px;
+    position: relative;
+    z-index: 10;
+}
+.ranking_lst.top .title_area {
+    height: 37px;
+}
+.ranking_lst .title_area .ico_arr1 {
+    margin: 0 0 0 6px;
+}
+.ranking_lst .title_area .sort_area {
+    padding-right: 12px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.ranking_lst .title_area .sort_area .checked {
+    color: #767676;
+    display: inline-block;
+    vertical-align: top;
+}
+.ranking_lst .title_area .sort_area .checked .ico_chk {
+    margin: 1px 0 0 9px;
+}
+.ranking_lst .title_area .sort_box {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ddd;
+    display: none;
+    padding: 9px 0 11px;
+    position: absolute;
+    right: 0;
+    top: -20px;
+    width: 188px;
+    z-index: 10;
+}
+.ranking_lst .title_area .sort_box li {
+    height: 33px;
+    padding-right: 35px;
+    position: relative;
+    text-align: right;
+}
+.ranking_lst .title_area .sort_box li:first-child {
+    margin: 0;
+}
+.ranking_lst .title_area .sort_box a {
+    cursor: pointer;
+    display: block;
+    height: 23px;
+    padding-top: 10px;
+}
+.ranking_lst .title_area .sort_box .ico_chk {
+    position: absolute;
+    right: 11px;
+    top: 11px;
+}
+.ranking_lst .left_area, .ranking_lst .right_area {
+    float: left;
+    width: 50%;
+}
+.ranking_lst .left_area .title_area, .ranking_lst .left_area .lst_type1, .ranking_lst .left_area .ranking_tab {
+    margin-right: 30px;
+}
+.ranking_lst .right_area .title_area, .ranking_lst .right_area .lst_type1, .ranking_lst .right_area .ranking_tab {
+    margin-left: 30px;
+}
+.ranking_tab {
+    border-bottom: 1px solid #dcdcdc;
+}
+.ranking_tab:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.ranking_tab li {
+    border-top: 1px solid #dcdcdc;
+    float: left;
+    width: 16.66%;
+}
+.ranking_tab a {
+    color: #707070;
+    cursor: pointer;
+    display: block;
+    height: 66px;
+    text-align: center;
+}
+.ranking_tab li.on a {
+    background: none repeat scroll 0 0 #11d300;
+    color: #fff;
+    height: 67px;
+    margin: -1px 0;
+    padding-top: 1px;
+    position: relative;
+    z-index: 10;
+}
+.lst_type1 {
+    border-bottom: 1px solid #ddd;
+}
+.lst_type1 li {
+    border-top: 1px solid #ddd;
+    position: relative;
+}
+.lst_type1 a {
+    cursor: pointer;
+    display: block;
+}
+.lst_type1 .pic_area {
+    height: 98px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 92px;
+}
+.lst_type1 .icon_area {
+    bottom: 6px;
+    left: 7px;
+    position: absolute;
+    z-index: 10;
+}
+.lst_type1 .icon_area span {
+    margin-right: 3px;
+}
+.lst_type1 .num_ranking {
+    left: 9px;
+    position: absolute;
+    top: 11px;
+}
+.lst_type1 .info_area {
+    height: 98px;
+    padding: 0 80px 0 115px;
+}
+.lst_type1 .info_area .genre {
+    font-size: 13px;
+    line-height: 15px;
+    padding-top: 22px;
+}
+.lst_type1 .info_area .subj {
+    font-family: "hind_m","simhei";
+    font-size: 18px;
+    line-height: 21px;
+    overflow: hidden;
+    padding-top: 3px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.lst_type1 .info_area .author {
+    font-size: 13px;
+    line-height: 15px;
+}
+.lst_type1 .grade_area {
+    position: absolute;
+    right: 13px;
+    top: 39px;
+}
+.lst_type1 .ranking_top {
+    border-top: 0 none;
+    height: 200px;
+    overflow: hidden;
+}
+.lst_type1 .ranking_top a {
+    height: 200px;
+}
+.lst_type1 .ranking_top .num_ranking {
+    color: #000;
+    font-size: 56px;
+    left: 7px;
+    top: 26px;
+}
+.lst_type1 .ranking_top .pic_area {
+    height: 256px;
+    left: auto;
+    position: absolute;
+    right: 0;
+    top: -38px;
+    width: 256px;
+}
+.lst_type1 .ranking_top .icon_area {
+    bottom: 16px;
+    left: auto;
+    right: 15px;
+}
+.lst_type1 .ranking_top .info_area {
+    height: auto;
+    left: 44px;
+    padding: 0 40px 0 0;
+    position: absolute;
+    top: 0;
+    width: 420px;
+    z-index: 10;
+}
+.lst_type1 .ranking_top .info_area .genre {
+    padding-top: 26px;
+}
+.lst_type1 .ranking_top .info_area .subj {
+    font-family: "hind_m","simhei";
+    font-size: 23px;
+    line-height: 23px;
+    margin-top: 3px;
+}
+.lst_type1 .ranking_top .info_area .author {
+    font-family: "hind_m","simhei";
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 9px;
+}
+.lst_type1 .ranking_top .summary {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 6px;
+    max-height: 48px;
+    overflow: hidden;
+    width: 310px;
+}
+.lst_type1 .ranking_top .grade_area {
+    margin: 10px 0 0;
+    position: relative;
+    right: auto;
+    top: auto;
+}
+.daily_lst {
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 39px;
+    width: 1208px;
+}
+.daily_section {
+    float: left;
+    padding: 0 4px 4px;
+    width: 154px;
+}
+.daily_section h3 a {
+    display: block;
+    height: 66px;
+    text-align: center;
+}
+.daily_section h3 span {
+    margin-top: 26px;
+}
+.daily_card {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #dbdbdb #dbdbdb;
+    border-image: none;
+    border-right: 1px solid #dbdbdb;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+}
+.daily_card li {
+    border-top: 1px solid #dbdbdb;
+    height: 152px;
+    width: 152px;
+}
+.daily_card_item {
+    background: none repeat scroll 0 0 #fff;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    position: relative;
+    text-align: right;
+    width: 100%;
+}
+.daily_card_item img {
+    margin-top: 14px;
+}
+.daily_card_item .info {
+    height: 110px;
+    left: 12px;
+    position: absolute;
+    text-align: left;
+    top: 14px;
+    width: 130px;
+}
+.daily_card_item .subj {
+    font-family: "Hind_m","simhei";
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+}
+.daily_card_item .author {
+    display: none;
+}
+.daily_card_item .icon_area {
+    margin-top: 3px;
+}
+.daily_card_item .icon_area span {
+    margin-right: 3px;
+}
+.daily_card_item .genre {
+    bottom: 7px;
+    font-family: "Hind_m","simhei";
+    font-size: 13px;
+    left: 12px;
+    line-height: 14px;
+    position: absolute;
+}
+.daily_card_item .grade_area {
+    display: none;
+}
+.daily_section.on {
+    background: none repeat scroll 0 0 #28dc18;
+    width: 228px;
+}
+.daily_section.on .daily_card li {
+    width: 226px;
+}
+.daily_section.on .daily_card_item .genre {
+    bottom: auto;
+    top: 14px;
+}
+.daily_section.on .daily_card_item .info {
+    height: 90px;
+    top: 28px;
+    width: 206px;
+}
+.daily_section.on .daily_card_item .subj {
+    font-size: 17px;
+    line-height: 17px;
+    margin-top: 5px;
+}
+.daily_section.on .daily_card_item .author {
+    display: block;
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 2px;
+}
+.daily_section.on .daily_card_item .grade_area {
+    bottom: 13px;
+    display: block;
+    left: 11px;
+    line-height: 17px;
+    position: absolute;
+}
+.daily_bar {
+    background: none repeat scroll 0 0 #eaeaea;
+    height: 1px;
+    line-height: 1px;
+}
+.daily_lst.comp .daily_section {
+    float: none;
+    padding: 0;
+    width: auto;
+}
+.daily_lst.comp .daily_section > h3 {
+    height: 36px;
+    padding: 39px 0 0 8px;
+}
+.daily_lst.comp .daily_section > h3 span {
+    margin: 0;
+}
+.daily_lst.comp .daily_section.on {
+    background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+}
+.daily_lst.comp .daily_card {
+    border: 0 none;
+    margin-bottom: -10px;
+    overflow: hidden;
+}
+.daily_lst.comp .daily_card li {
+    border: 1px solid #dbdbdb;
+    float: left;
+    height: 152px;
+    margin: 0 4px 8px;
+    width: 228px;
+}
+.detail_bg {
+    background: none repeat scroll 0 0 #fff;
+    height: 321px;
+    left: 0;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
+.detail_bg.g_drama {
+    background: url("http://webtoons.static.naver.net/image/pc/drama_bg.jpg?dt=2014120401") no-repeat scroll 50% 0 #47c1ac;
+}
+.detail_bg.g_fantasy {
+    background: url("http://webtoons.static.naver.net/image/pc/fantasy_bg.jpg?dt=2014120401") no-repeat scroll 50% 0 #7d34e5;
+}
+.detail_bg.g_comedy {
+    background: url("http://webtoons.static.naver.net/image/pc/comedy_bg.jpg?dt=2014120401") no-repeat scroll 50% 0 #f2af00;
+}
+.detail_bg.g_action {
+    background: url("http://webtoons.static.naver.net/image/pc/action_bg.jpg?dt=2014120401") no-repeat scroll 50% 0 #07f;
+}
+.detail_bg.g_slice_of_life {
+    background: url("http://webtoons.static.naver.net/image/pc/sliceoflife_bg.jpg?dt=2014120401") no-repeat scroll 50% 0 #aebc33;
+}
+.detail_bg.g_romance {
+    background: url("http://webtoons.static.naver.net/image/pc/romance_bg.jpg?dt=2014120401") no-repeat scroll 50% 0 #f1357f;
+}
+.detail_bg.g_heartwarming {
+    background: url("http://webtoons.static.naver.net/image/pc/heartwarming_bg.jpg?dt=2014120401") no-repeat scroll 50% 0 #f26702;
+}
+.detail_bg.g_thriller {
+    background: url("http://webtoons.static.naver.net/image/pc/thriller_bg.jpg?dt=2014120401") no-repeat scroll 50% 0 #c00355;
+}
+.detail_bg.g_historical {
+    background: url("http://webtoons.static.naver.net/image/pc/historical_bg.jpg?dt=2014120401") no-repeat scroll 50% 0 #62422b;
+}
+.detail_bg.g_sports {
+    background: url("http://webtoons.static.naver.net/image/pc/sports_bg.jpg?dt=2014120401") no-repeat scroll 50% 0 #33b9ff;
+}
+.detail_header {
+    height: 240px;
+    position: relative;
+    text-align: center;
+    z-index: 20;
+}
+.detail_header .thmb {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.detail_header .valign {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.detail_header .info {
+    display: inline-block;
+    max-width: 1196px;
+    position: relative;
+    vertical-align: middle;
+}
+.detail_header .info .genre {
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 2px;
+}
+.detail_header .info .subj {
+    color: #fff;
+    font-size: 55px;
+    font-weight: normal;
+    line-height: 55px;
+    margin-top: 5px;
+}
+.detail_header .info .author {
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: 21px;
+    margin-top: 13px;
+    position: relative;
+}
+.detail_header .info .subj + .author {
+    margin-left: 0;
+}
+.detail_header .info .ico_search2 {
+    margin: -3px 0 0 8px;
+    vertical-align: middle;
+}
+.detail_header .info .toon_btn .ly_area {
+    left: -43px;
+    line-height: 27px;
+    top: 40px;
+    z-index: 60;
+}
+.detail_header .info.challenge {
+    margin-left: 233px;
+    max-width: 963px;
+    text-align: left;
+}
+.detail_header .info.challenge .genre {
+    color: #fff;
+}
+.detail_header .info.challenge .subj {
+    color: #fff !important;
+}
+.detail_header .info.challenge .author {
+    color: #fff !important;
+}
+.detail_header .info.challenge .ico_search2 {
+    background-position: -450px -20px;
+}
+.detail_header .spi_area {
+    bottom: 10px;
+    position: absolute;
+    right: 0;
+}
+.detail_header .spi_area [class^="ico_"] {
+    height: 36px;
+    width: 35px;
+}
+.detail_header .spi_area li {
+    float: left;
+    margin-left: 6px;
+}
+.detail_header .spi_area li:first-child {
+    margin: 0;
+}
+.detail_header .spi_area li .ly_area {
+    border: 0 none;
+    height: 24px;
+    left: -74px;
+    padding: 16px 24px;
+    top: -73px;
+}
+.detail_header .spi_area li .ico_copy ~ .ly_area {
+    height: 48px;
+    left: auto;
+    right: -17px;
+    top: -94px;
+}
+.detail_header .spi_area li .ly_area .ly_cont {
+    color: #000;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+.detail_header .spi_area li .ico_copy ~ .ly_area .ico_arr {
+    left: auto;
+    right: 24px;
+}
+.detail_header .ico_facebook {
+    background-position: -40px -290px;
+}
+.detail_header .ico_twitter {
+    background-position: -80px -290px;
+}
+.detail_header .ico_weibo {
+    background-position: -140px -640px;
+}
+.detail_header .ico_qq {
+    background-position: -180px -640px;
+}
+.detail_header .ico_renren {
+    background-position: -220px -640px;
+}
+.detail_header .ico_line {
+    background-position: -260px -640px;
+}
+.detail_header.type_white .info .author {
+    color: #252525;
+}
+.detail_header.type_white .subj {
+    color: #000;
+}
+.detail_header.type_white .ico_search2 {
+    background-position: -450px 0;
+}
+.detail_header.type_white .ico_favorites {
+    background-position: 0 -250px;
+}
+.detail_header.type_white .ico_favorites.on {
+    background-position: -460px -110px;
+}
+.detail_header.type_white .ico_facebook {
+    background-position: -40px -250px;
+}
+.detail_header.type_white .ico_twitter {
+    background-position: -80px -250px;
+}
+.detail_header.type_white .ico_weibo {
+    background-position: -140px -680px;
+}
+.detail_header.type_white .ico_qq {
+    background-position: -180px -680px;
+}
+.detail_header.type_white .ico_renren {
+    background-position: -220px -680px;
+}
+.detail_header.type_white .ico_line {
+    background-position: -260px -680px;
+}
+.detail_header.type_white .ico_copy {
+    background-position: -120px -250px;
+}
+.detail_header .toon_btn {
+    display: inline-block;
+    height: 23px;
+    margin: -4px 0 0 -1px;
+    vertical-align: middle;
+}
+.detail_header .toon_btn .txt_btn_delete3 {
+    margin-left: 4px;
+}
+.detail_header.challenge {
+    text-align: left;
+}
+.detail_header.challenge .thmb {
+    top: 11px;
+}
+.detail_header.challenge .thmb .skin {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_chal_detail_skin.png?dt=2014120401") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 218px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 218px;
+}
+.detail_header.challenge .thmb .skin.g_drama {
+    background-position: 0 0;
+}
+.detail_header.challenge .thmb .skin.g_fantasy {
+    background-position: -230px 0;
+}
+.detail_header.challenge .thmb .skin.g_comedy {
+    background-position: -460px 0;
+}
+.detail_header.challenge .thmb .skin.g_action {
+    background-position: -690px 0;
+}
+.detail_header.challenge .thmb .skin.g_slice_of_life {
+    background-position: -920px 0;
+}
+.detail_header.challenge .thmb .skin.g_romance {
+    background-position: 0 -230px;
+}
+.detail_header.challenge .thmb .skin.g_heartwarming {
+    background-position: -230px -230px;
+}
+.detail_header.challenge .thmb .skin.g_thriller {
+    background-position: -460px -230px;
+}
+.detail_header.challenge .thmb .skin.g_historical {
+    background-position: -690px -230px;
+}
+.detail_header.challenge .thmb .skin.g_sports {
+    background-position: -920px -230px;
+}
+.detail_body {
+    background: none repeat scroll 0 0 #fff;
+    min-height: 839px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+.detail_body .detail_lst {
+    background: none repeat scroll 0 0 #fff;
+    border-right: 2px solid #f5f5f5;
+    float: left;
+    min-height: 742px;
+    padding: 31px 20px 66px;
+    position: relative;
+    width: 761px;
+}
+.detail_body .detail_lst ul span {
+    display: inline-block;
+    padding-top: 26px;
+    vertical-align: top;
+}
+.detail_body .detail_lst .thmb {
+    padding: 0;
+}
+.detail_body .detail_lst .subj {
+    font-size: 17px;
+    margin-left: 12px;
+    padding-top: 24px;
+    width: 424px;
+}
+.detail_body .detail_lst .subj span {
+    color: #3d3d3d;
+    max-width: 370px;
+    overflow: hidden;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+}
+.detail_body .detail_lst .date {
+    color: #b1b1b1;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 102px;
+}
+.detail_body .detail_lst .tx_up {
+    color: #00d92d;
+    font-size: 13px;
+    margin-left: 5px;
+}
+.detail_body .detail_lst .ico_bgm {
+    margin: -2px 0 0 5px;
+    vertical-align: middle;
+}
+.detail_body .detail_lst .like_area {
+    color: #b1b1b1;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 76px;
+}
+.detail_body .detail_lst .tx {
+    color: #3d3d3d;
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding-top: 25px;
+    text-align: right;
+    width: 59px;
+}
+.detail_body .detail_lst li {
+    border-bottom: 1px solid #f5f5f5;
+    position: relative;
+}
+.detail_body .detail_lst li:first-child {
+    border-top: 1px solid #f5f5f5;
+}
+.detail_body .detail_lst li > a {
+    display: block;
+    height: 73px;
+    white-space: nowrap;
+}
+.detail_body .detail_lst li:hover {
+    background: none repeat scroll 0 0 #fbfbfb;
+}
+.detail_body .detail_lst li a:visited .subj span, .detail_body .detail_lst li a:visited .date, .detail_body .detail_lst li a:visited .tx, .detail_body .detail_lst li a:visited .like_area {
+    color: #c4c4c4;
+}
+.detail_body .detail_lst .ico_like {
+    margin: 4px 5px 0 0;
+}
+.detail_body .detail_lst .manage_blank {
+    display: none;
+    height: 100%;
+    padding: 0;
+    vertical-align: top;
+    width: 114px;
+}
+.detail_body .detail_lst .manage {
+    display: none;
+    left: 415px;
+    position: absolute;
+    top: 26px;
+}
+.detail_body .detail_lst .owner .subj {
+    width: 307px;
+}
+.detail_body .detail_lst .owner .subj span {
+    max-width: 290px;
+}
+.detail_body .detail_lst .owner .manage_blank {
+    display: inline-block;
+}
+.detail_body .detail_lst .owner .manage {
+    display: block;
+    padding: 0;
+}
+.detail_body .detail_lst .owner .manage a {
+    margin-right: 3px;
+}
+.detail_body .detail_notice {
+    border-top: 1px solid #f5f5f5;
+    color: #010101;
+    font-family: "hind_m","simhei";
+    font-size: 17px;
+    padding: 23px 0;
+    text-align: center;
+}
+.detail_body .detail_notice .txt_ico_hiatus {
+    margin: -2px 11px 0 0;
+}
+.detail_body .paginate {
+    bottom: 18px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.detail_body .paginate .pg_prev {
+    margin-left: -13px;
+}
+.detail_body .paginate .pg_next {
+    margin-right: -13px;
+}
+.detail_other {
+    clear: both;
+    overflow: hidden;
+    padding: 74px 0 112px;
+}
+.detail_other h4.txt_detail {
+    margin-bottom: 15px;
+}
+.detail_other .lst_type1 {
+    border-bottom: 0 none;
+}
+.detail_other .lst_type1 li {
+    background: none repeat scroll 0 0 #fff;
+    border-top: 0 none;
+    float: left;
+    width: 400px;
+}
+.detail_other .lst_type1 .info_area {
+    height: 50px;
+    padding: 27px 80px 21px 107px;
+}
+.detail_other .lst_type1 .info_area .subj {
+    font-size: 19px;
+}
+.detail_other .lst_type1 .info_area .author {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 4px;
+}
+.detail_other .lst_type1 .grade_area {
+    right: 20px;
+}
+.aside.detail {
+    height: 100%;
+    padding: 52px 0 0 40px;
+    width: 357px;
+}
+.aside.detail .day_info {
+    color: #02cd2c;
+    font-size: 19px;
+    height: 45px;
+    line-height: 33px;
+}
+.aside.detail .day_info .txt_ico_up {
+    margin: 0 10px 0 0;
+}
+.aside.detail .summary {
+    color: #313131;
+    font-size: 16px;
+    line-height: 25px;
+    margin: 3px 57px 0 0;
+}
+.aside.detail .grade_area {
+    margin: 18px 30px 0 0;
+    position: relative;
+    z-index: 100;
+}
+.aside.detail .grade_area .grade_detail .grade_cont, .aside.detail .grade_area .grade_detail .grade_cont span, .ly_grade .grade_cont a {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_ico_v5.png?dt=2014120401") no-repeat scroll -90px -330px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 17px;
+    margin-top: 3px;
+    overflow: hidden;
+    vertical-align: top;
+    width: 104px;
+}
+.aside.detail .grade_area .grade_detail .grade_cont span {
+    background-position: -90px -350px;
+    display: block;
+    line-height: 9999px;
+    margin: 0;
+}
+.aside.detail .grade_area .grade_detail .grade_cnt {
+    color: #000;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-left: 8px;
+    vertical-align: top;
+}
+.aside.detail .grade_area .txt_btn_rate {
+    margin-left: 2px;
+}
+.aside.detail .grade_area .ly_grade {
+    background: none repeat scroll 0 0 #2f2f2f;
+    border-radius: 15px;
+    display: none;
+    height: 168px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: 33px;
+    width: 256px;
+}
+.aside.detail .grade_area .ly_grade.on {
+    display: block;
+}
+.aside.detail .grade_area strong {
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 26px 0 10px;
+    text-align: center;
+}
+.aside.detail .grade_area .ly_grade .grade_cont {
+    display: inline-block;
+    height: 24px;
+    margin: 0;
+}
+.aside.detail .grade_area .ly_grade .grade_cont a {
+    background-position: -360px -290px;
+    float: left;
+    height: 22px;
+    text-indent: -9999px;
+    width: 12px;
+}
+.aside.detail .grade_area .ly_grade .grade_cont a.on {
+    background-position: -360px -320px;
+}
+.aside.detail .grade_area .ly_grade .grade_cont a.st_r {
+    background-position: -372px -290px;
+    margin-right: 2px;
+}
+.aside.detail .grade_area .ly_grade .grade_cont a.st_r.on {
+    background-position: -372px -320px;
+}
+.aside.detail .grade_area .ly_grade .grade_cont a:first-child {
+    position: absolute;
+    top: -9999px;
+}
+.aside.detail .grade_area .ly_grade .grade_cnt {
+    color: #fff;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 23px;
+    letter-spacing: 1px;
+    margin-left: 12px;
+    text-align: left;
+    vertical-align: top;
+    width: 32px;
+}
+.aside.detail .grade_area .grade_btn {
+    background: none repeat scroll 0 0 #363636;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 256px;
+}
+.aside.detail .grade_area .grade_btn a {
+    color: #fff;
+    display: inline-block;
+    float: left;
+    font-size: 19px;
+    height: 47px;
+    line-height: 49px;
+    padding-top: 2px;
+    text-align: center;
+    width: 127px;
+}
+.aside.detail .grade_area .grade_btn .bar {
+    background: none repeat scroll 0 0 #484848;
+    height: 29px;
+    left: 50%;
+    position: absolute;
+    top: 10px;
+}
+.aside.detail .grade_area .grade_btn .lnk_cncl {
+    opacity: 0.5;
+}
+.aside.detail .aside_btn {
+    margin-top: 22px;
+}
+.aside.detail .aside_btn .txt_btn_read {
+    margin-right: 4px;
+}
+.tool_area {
+    background: none repeat scroll 0 0 #2f2f2f;
+    color: #fff;
+    font-size: 17px;
+    font-weight: normal;
+    height: 50px;
+    min-width: 1200px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.tool_area .info {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 44%;
+    z-index: 100;
+}
+.tool_area .logo {
+    height: 50px;
+}
+.tool_area .logo .btn_logo {
+    background-position: -190px -430px;
+    display: block;
+    height: 34px;
+    margin: 8px 20px;
+    position: relative;
+    width: 36px;
+    z-index: 100;
+}
+.tool_area .subj_info {
+    margin-top: 11px;
+}
+.tool_area .subj_info .subj {
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 11px;
+    max-width: 50%;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    z-index: 100;
+}
+.tool_area .subj_episode {
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-top: 1px;
+    max-width: 28%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.tool_area .bgm_btn {
+    display: inline-block;
+    margin: 4px 0 0 5px;
+    position: relative;
+    vertical-align: top;
+    z-index: 100;
+}
+.toon_btn {
+    display: inline-block;
+    margin: 4px 0 0 5px;
+    position: relative;
+    vertical-align: top;
+}
+.tool_area .toon_btn {
+    z-index: 100;
+}
+.toon_btn .ly_area {
+    font-size: 17px;
+    left: -41px;
+    padding: 13px 25px 16px;
+    text-align: center;
+    top: 42px;
+}
+.toon_btn .ly_area .ico_arr.v2.up {
+    right: 105px;
+}
+.tool_area .ico_arr2 {
+    margin: 8px 6px 0 0;
+    vertical-align: top;
+}
+.tool_area .paginate.v2 {
+    height: 50px;
+    position: relative;
+    z-index: 50;
+}
+.tool_area .paginate.v2 [class^="pg_"] {
+    height: 33px;
+    margin-top: 8px;
+    vertical-align: top;
+    width: 32px;
+}
+.tool_area .paginate.v2 [class^="pg_"] em {
+    height: 100%;
+    margin: 0;
+    vertical-align: top;
+    width: 100%;
+}
+.tool_area .paginate.v2 .pg_prev em {
+    background-position: -170px -190px;
+}
+.tool_area .paginate.v2 .pg_next em {
+    background-position: -210px -190px;
+}
+.tool_area .paginate.v2 .pg_prev.dim em {
+    background-position: -90px -190px;
+}
+.tool_area .paginate.v2 .pg_next.dim em {
+    background-position: -130px -190px;
+}
+.tool_area .paginate.v2 .tx {
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin: 12px 11px 0 12px;
+}
+.tool_area .episode_area {
+    background: url("http://webtoons.static.naver.net/image/pc/bg_viewer.png?dt=2014120401") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    display: none;
+    height: 171px;
+    width: 100%;
+}
+.tool_area .episode_area.unfd {
+    display: block;
+}
+.tool_area .btn_episode_fd {
+    bottom: -196px;
+    display: none;
+    left: 50%;
+    margin-left: -42px;
+    position: absolute;
+}
+.tool_area .episode_area.unfd ~ .btn_episode_fd {
+    display: block;
+}
+.tool_area .right_area {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.tool_area .right_area .toon_btn {
+    float: left;
+    margin: 12px 15px 0 0;
+}
+.tool_area .right_area .bgm_btn {
+    float: left;
+    margin: 11px 15px 0 0;
+}
+.tool_area .spi_area {
+    float: left;
+    margin: 9px 14px 0 0;
+    text-align: center;
+}
+.tool_area .spi_area [class^="ico_"] {
+    height: 31px;
+    width: 31px;
+}
+.tool_area .spi_area .ico_favorites {
+    background-position: -200px -250px;
+}
+.tool_area .spi_area .ico_favorites.on {
+    background-position: -160px -250px;
+}
+.tool_area .spi_area .ico_facebook {
+    background-position: -240px -250px;
+}
+.tool_area .spi_area .ico_twitter {
+    background-position: -280px -250px;
+}
+.tool_area .spi_area .ico_weibo {
+    background-position: -310px -640px;
+}
+.tool_area .spi_area .ico_qq {
+    background-position: -350px -640px;
+}
+.tool_area .spi_area .ico_renren {
+    background-position: -390px -640px;
+}
+.tool_area .spi_area .ico_line {
+    background-position: -430px -640px;
+}
+.tool_area .spi_area .ico_copy {
+    background-position: -320px -250px;
+}
+.tool_area .spi_area li {
+    height: 31px;
+    margin-left: 4px;
+    width: 31px;
+}
+.tool_area .spi_area li .ly_area {
+    background: none repeat scroll 0 0 #fff;
+    font-family: "hind_m","simhei";
+    height: auto;
+    line-height: 25px;
+    padding: 13px 20px 12px;
+    right: -107px;
+    top: 54px;
+}
+.tool_area .spi_area li .ico_copy ~ .ly_area {
+    right: -2px;
+}
+.tool_area .spi_area li .ico_copy ~ .ly_area .ico_arr {
+    right: 7px;
+}
+.cont_box .viewer_lst {
+    overflow: hidden;
+    padding-top: 48px;
+    text-align: center;
+}
+.viewer_lst .viewer_lst {
+    margin-bottom: 215px;
+}
+.cont_box .viewer_lst .spi_area {
+    display: inline-block;
+    margin: 18px auto 53px;
+    width: auto;
+}
+.cont_box .viewer_lst .spi_area [class^="ico_"] {
+    height: 37px;
+    width: 37px;
+}
+.cont_box .viewer_lst .spi_area li {
+    margin-left: 4px;
+}
+.cont_box .viewer_lst .spi_area .lnk_favorites.bx {
+    margin-right: 20px;
+    min-width: 60px;
+}
+.cont_box .viewer_lst .spi_area .lnk_favorites .tx_area {
+    margin: 0 -8px 0 -4px;
+}
+.cont_box .viewer_lst .spi_area .txt_favorites {
+    margin-top: 4px;
+}
+.cont_box .viewer_lst .spi_area .ico_facebook {
+    background-position: -160px -290px;
+}
+.cont_box .viewer_lst .spi_area .ico_twitter {
+    background-position: -200px -290px;
+}
+.cont_box .viewer_lst .spi_area .ico_weibo {
+    background-position: -310px -680px;
+}
+.cont_box .viewer_lst .spi_area .ico_qq {
+    background-position: -350px -680px;
+}
+.cont_box .viewer_lst .spi_area .ico_renren {
+    background-position: -390px -680px;
+}
+.cont_box .viewer_lst .spi_area .ico_line {
+    background-position: -430px -680px;
+}
+.cont_box .viewer_lst .spi_area .ico_copy {
+    background-position: -240px -290px;
+}
+.cont_box .viewer_lst .spi_area li .ly_area {
+    background: none repeat scroll 0 0 #fff;
+    bottom: 54px;
+    font-family: "hind_m","simhei";
+    height: auto;
+    left: -44px;
+    padding: 12px 20px 11px;
+}
+.cont_box .viewer_lst .spi_area li .ly_area .ly_cont {
+    line-height: 25px;
+}
+.cont_box .viewer_lst .spi_area li .ly_area.share {
+    font-family: "hind";
+    left: -42px;
+    min-width: 345px;
+    padding: 19px 10px 16px;
+    white-space: normal;
+}
+.cont_box .viewer_lst .spi_area li .ly_area.share.v2 {
+    min-width: 225px;
+    padding: 18px 10px 15px;
+    right: -76px;
+}
+.cont_box .viewer_lst .spi_area li .ly_area.share .ly_tit {
+    color: #000;
+    display: block;
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+.cont_box .viewer_lst .spi_area li .ly_area.share .ly_cont {
+    color: #868686;
+    display: block;
+    font-size: 16px;
+    line-height: 19px;
+}
+.cont_box .viewer_lst .spi_area li .ly_area.share .ico_arr {
+    right: 173px;
+}
+.cont_box .viewer_lst .spi_area li .ly_area.share.v2 .ico_arr {
+    right: 113px;
+}
+.cont_box .viewer_lst .spi_area li .ly_btn [class^="btn"] {
+    color: #000;
+    font-family: "hind";
+    font-size: 16px;
+    height: 32px;
+    line-height: 34px;
+    margin-top: 13px;
+    padding-top: 1px;
+}
+.cont_box .viewer_lst .spi_area li .ly_btn a:first-child {
+    margin-right: 1px;
+}
+.cont_box .viewer_lst .spi_area li .ico_copy ~ .ly_area {
+    left: auto;
+    right: -15px;
+    top: auto;
+}
+.cont_box .viewer_lst .spi_area li .ico_copy ~ .ly_area .ico_arr {
+    left: auto;
+    right: 24px;
+}
+.viewer_lst .day_info {
+    color: #000;
+    font-size: 17px;
+}
+.viewer_lst .day_info .txt_ico_up {
+    margin: -2px 5px 0 0;
+}
+.cont_box .report_area {
+    bottom: 53px;
+    position: absolute;
+    right: 24px;
+}
+.cont_box .report_area .lk_report {
+    border: 2px solid #d2d2d2;
+    border-radius: 19px;
+    color: #a5a5a5;
+    display: inline-block;
+    font-size: 16px;
+    height: 34px;
+    line-height: 36px;
+    width: 78px;
+}
+.cont_box .report_area .ly_area {
+    bottom: 53px;
+    min-width: 311px;
+    right: -24px;
+}
+.cont_box .report_area .ly_area .ly_cont {
+    padding: 16px 0 9px;
+}
+.cont_box .report_area .ly_area .ly_tit {
+    font-size: 17px;
+    line-height: 23px;
+}
+.cont_box .report_area .ly_area .dsc {
+    color: #747474;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 5px;
+}
+.cont_box .report_area .ly_area .dsc .lk_clickhere {
+    color: #008def;
+    text-decoration: underline;
+}
+.cont_box .report_area .ly_area .ly_btn {
+    margin: 0 auto 18px 0;
+}
+.cont_box .report_area .ly_area .ico_arr {
+    right: 55px;
+}
+.episode_area {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #ebebeb;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 0;
+    height: 172px;
+    text-align: center;
+}
+.episode_lst {
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    width: 1148px;
+}
+.episode_lst .episode_cont {
+    height: 100%;
+    left: 50%;
+    margin-left: -537px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 1074px;
+}
+.episode_lst ul {
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    margin: 0 -15px;
+    overflow: hidden;
+    padding: 0 3px;
+    position: absolute;
+    top: 0;
+    width: auto;
+}
+.episode_lst li {
+    float: left;
+    padding: 31px 15px 0;
+}
+.episode_lst .thmb {
+    display: block;
+    margin-bottom: 7px;
+    position: relative;
+}
+.episode_lst li a {
+    display: block;
+    width: 92px;
+}
+.episode_lst li .on {
+    color: #02ea37;
+    margin: -3px;
+    width: 98px;
+}
+.episode_lst li .on .thmb {
+    border: 3px solid #02ea37;
+    margin-bottom: 4px;
+}
+.episode_lst .subj {
+    color: #959595;
+    display: block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.episode_lst ul .mask {
+    background: none repeat scroll 0 0 #959595;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.episode_lst ul .on .mask {
+    opacity: 0;
+}
+.episode_lst .paginate a {
+    height: 22px;
+    margin-top: -11px;
+    position: absolute;
+    top: 86px;
+    vertical-align: top;
+    width: 14px;
+}
+.episode_lst a[class^="pg_"] em {
+    height: 100%;
+    margin: 0;
+    vertical-align: top;
+    width: 100%;
+}
+.episode_lst a.pg_prev {
+    left: -3px;
+}
+.episode_lst a.pg_prev em {
+    background-position: -360px -140px;
+}
+.episode_lst a.pg_next {
+    right: -3px;
+}
+.episode_lst a.pg_next em {
+    background-position: -380px -140px;
+}
+.comment_area {
+    float: left;
+    height: 100%;
+    padding: 85px 70px 0 0;
+    width: 800px;
+}
+.comment_area h2 {
+    margin-bottom: 12px;
+}
+.comment_area h2 .cnt {
+    color: #9e9e9e;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-left: 5px;
+    vertical-align: top;
+}
+.comment_area .input_textarea {
+    height: 76px;
+}
+.comment_area .input_tx {
+    background: none repeat scroll 0 0 #ececec;
+    border: 0 none;
+    color: #bbbcbf;
+    float: left;
+    font-size: 15px;
+    height: 45px;
+    padding: 11px 17px 20px;
+    width: 609px;
+}
+.comment_area .input_tx.focus {
+    color: #5f5f5f;
+}
+.comment_area .comment_post {
+    background: none repeat scroll 0 0 #bbbcbf;
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    height: 76px;
+    text-align: center;
+    width: 93px;
+}
+.comment_area .length_area {
+    margin: 6px 2px 0 0;
+    position: relative;
+    z-index: 100;
+}
+.comment_area .length_area .tx_length {
+    color: #a0a0a0;
+    display: block;
+    font-size: 11px;
+    text-align: right;
+}
+.comment_area .ly_area {
+    padding: 17px 34px;
+    right: -84px;
+    text-align: center;
+    top: 31px;
+    z-index: 100;
+}
+.comment_area .ly_area .ly_cont {
+    display: block;
+    line-height: 22px;
+}
+.comment_area .ly_area .ico_arr.v2 {
+    right: 83px;
+}
+.comment_area .writer_btn .ly_area {
+    right: -100px;
+}
+.comment_area .writer_btn .ly_area .ico_arr.v2 {
+    right: 104px;
+}
+.comment_area .writer_btn .ly_area .btn_bx {
+    display: inline-block;
+}
+.comment_area .writer_btn .ly_btn {
+    margin-top: 11px;
+}
+.comment_lst {
+    font-size: 15px;
+    margin-top: 3px;
+}
+.comment_lst li {
+    border-bottom: 1px solid #dbdbdb;
+    padding: 12px 0 11px;
+}
+.comment_lst .wrt_name {
+    color: #000;
+    font-family: "Hind_m","simhei";
+    font-weight: normal;
+}
+.comment_lst .wrt_date {
+    color: #898989;
+    font-size: 13px;
+    margin-left: 10px;
+}
+.comment_lst li .comment_tx {
+    color: #5f5f5f;
+    font-size: 15px;
+    line-height: 21px;
+    margin: 1px 0;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.comment_lst li .comment_tx .input_tx {
+    color: #5f5f5f;
+    float: none;
+    height: 42px;
+    line-height: 19px;
+    margin-top: 6px;
+    padding: 14px 17px 12px;
+    width: 702px;
+}
+.comment_lst .wrt_info {
+    position: relative;
+}
+.comment_lst .writer_btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.comment_lst .btn_modify {
+    margin: 3px 8px 0 0;
+}
+.comment_lst .btn_delete3 {
+    margin: 4px 11px 0 0;
+}
+.comment_lst .sub_btn {
+    background: none repeat scroll 0 0 #fff;
+    height: 24px;
+    margin: 0 3px -7px 0;
+    text-align: right;
+}
+.comment_lst .sub_btn a {
+    color: #9e9e9e;
+    font-size: 12px;
+}
+.comment_lst .sub_btn .bar {
+    color: #ebebeb;
+    height: 10px;
+    margin: 5px 6px 0 7px;
+}
+.comment_area .paginate {
+    margin: 17px 0 100px;
+}
+.aside.viewer {
+    margin-top: 85px;
+    width: 330px;
+}
+.ranking_lst.viewer {
+    overflow: visible;
+    padding-bottom: 150px;
+    width: 330px;
+}
+.ranking_lst.viewer .lst_type1 .info_area {
+    padding-right: 19px;
+}
+.ranking_lst.viewer .lst_type1 .info_area .subj {
+    line-height: 24px;
+    padding-top: 30px;
+}
+.ranking_lst.viewer .lst_area ~ .lst_area {
+    margin-top: 45px;
+}
+.ranking_lst.viewer .title_area .ico_arr1 {
+    margin: 4px 0 0 2px;
+}
+.terms_area {
+    background: none repeat scroll 0 0 #fff;
+    color: #858585;
+    display: none;
+    font-size: 17px;
+    margin: 0 auto;
+    max-width: 1480px;
+    min-height: 700px;
+    padding: 52px 60px 93px;
+}
+.terms_area.on {
+    display: block;
+}
+.terms_area h3 {
+    color: #000;
+    font-size: 28px;
+    font-weight: normal;
+}
+.terms_area .date {
+    color: #b2b2b2;
+    margin-top: -1px;
+}
+.terms_area dt {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 46px 0 0;
+}
+.terms_area p {
+    margin-top: 17px;
+}
+.terms_area dd p:first-child {
+    margin-top: 20px;
+}
+.terms_area .tx {
+    margin-top: 7px;
+}
+.terms_area .date + .tx {
+    margin-top: 19px;
+}
+.terms_area .tx2 {
+    margin-top: 13px !important;
+}
+.terms_area a {
+    color: #06c;
+}
+.big_search {
+    height: 39px;
+    margin: 0 auto;
+    position: relative;
+    top: 13px;
+    width: 508px;
+    z-index: 20;
+}
+.big_search .search_area {
+    border-radius: 26px;
+    display: block;
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+.big_search .search_area .input_box {
+    display: block;
+    height: 32px;
+    padding: 7px 55px 0 23px;
+    width: 430px;
+}
+.big_search .search_area .input_search {
+    font-family: "hind_m","simhei";
+    font-size: 17px;
+}
+.big_search .search_area .search_dsc {
+    color: #cdcdcd;
+    font-size: 17px;
+    left: 24px;
+    line-height: 18px;
+    top: 12px;
+}
+.big_search .search_area .form_area {
+    height: 39px;
+    width: 55px;
+}
+.big_search .search_area .ico_search {
+    background-position: -200px -360px;
+    height: 15px;
+    margin: 0;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    width: 15px;
+}
+.big_search .search_area .btn_delete {
+    background-position: -230px -360px;
+    height: 17px;
+    margin: 0;
+    position: absolute;
+    right: 15px;
+    top: 11px;
+    width: 17px;
+}
+.big_search .search_area .ly_autocomplete .title {
+    font-size: 17px;
+    line-height: 19px;
+    margin: 19px 0 -1px;
+    padding-left: 22px;
+}
+.big_search .search_area .ly_autocomplete .autocomplete_foot {
+    padding: 12px 0 13px 23px;
+}
+.big_search .search_area .ly_autocomplete .autocomplete_foot .right {
+    right: 15px;
+    top: 12px;
+}
+.big_search .search_area .lst_autocomplete a {
+    height: 63px;
+    padding: 0 23px 0 73px;
+}
+.big_search .search_area .lst_autocomplete .pic {
+    left: 22px;
+    top: 13px;
+}
+.big_search .search_area .lst_autocomplete .subj {
+    font-size: 15px;
+    line-height: 18px;
+    max-width: 376px;
+    padding-top: 13px;
+}
+.big_search .search_area .lst_autocomplete .info {
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 5px;
+}
+.big_search .search_area .lst_autocomplete .info .author {
+    max-width: 212px;
+}
+.big_search .search_area .lst_autocomplete .info .bar {
+    height: 10px;
+    margin: 2px 6px 0;
+}
+.big_search .search_area .lst_autocomplete .info .grade_num {
+    font-size: 12px;
+    line-height: 15px;
+}
+.big_search .search_area .lst_autocomplete.creator {
+    padding: 8px 0 10px;
+}
+.big_search .search_area .lst_autocomplete.creator a {
+    height: 29px;
+    padding: 0 22px;
+}
+.big_search .search_area .lst_autocomplete.creator .info {
+    line-height: 29px;
+}
+.big_search .search_area .lst_autocomplete.creator .info .bar {
+    margin: 8px 6px 0;
+}
+.big_search .search_area .lst_autocomplete.creator .info .author {
+    font-size: 15px;
+    margin-right: 13px;
+    max-width: 130px;
+}
+.big_search .search_area .lst_autocomplete.creator .info .subj2 {
+    font-size: 14px;
+    max-width: 130px;
+}
+.big_search .search_area .lst_history {
+    padding: 9px 0 8px;
+}
+.big_search .search_area .lst_history li {
+    height: 31px;
+    line-height: 32px;
+    padding: 0 24px;
+}
+.big_search .search_area .lst_history a {
+    font-size: 16px;
+}
+.notice_area {
+    background: none repeat scroll 0 0 #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
+    height: 51px;
+    line-height: 51px;
+    padding-top: 2px;
+}
+.notice_area .notice_detail {
+    color: #000;
+    font-size: 17px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1200px;
+}
+.notice_area .notice_detail a {
+    display: inline-block;
+    vertical-align: top;
+}
+.notice_area .notice_detail .notice_tit {
+    font-family: "hind_m","simhei";
+}
+.notice_area .notice_detail .notice_tit .ico_arr3 {
+    margin: -3px 19px 0 20px;
+    vertical-align: middle;
+}
+.notice_area .notice_detail .notice_cont {
+    max-width: 965px;
+    padding-right: 102px;
+    position: relative;
+}
+.notice_area .subj {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+}
+.notice_area .notice_detail .notice_cont .subj {
+    word-break: break-all;
+}
+.notice_area .notice_detail .date {
+    color: #b1b1b1;
+    font-family: verdana;
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+    top: -1px;
+}
+.notice_area2 {
+    margin: 0 auto;
+    padding-bottom: 96px;
+    width: 1110px;
+}
+.notice_area2 .notice_detail {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+.notice_area2 .txt_notice {
+    margin: 42px 0 20px;
+}
+.notice_area2 .subj {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.notice_area2 .subj_area, .notice_area2 .tb_notice th {
+    background: none repeat scroll 0 0 #2f2f2f;
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    height: 47px;
+    line-height: 47px;
+    padding-top: 3px;
+}
+.notice_area2 .subj_area {
+    height: auto;
+    padding: 0 204px 0 42px;
+    position: relative;
+}
+.notice_area2 .subj_area .subj {
+    line-height: 20px;
+    max-width: 100%;
+    overflow: visible;
+    padding-top: 16px;
+    white-space: normal;
+}
+.notice_area2 .subj_area .date {
+    position: absolute;
+    right: 40px;
+    top: 1px;
+}
+.notice_area2 .date {
+    color: #b1b1b1;
+    font-family: verdana;
+    font-size: 13px;
+    text-align: center;
+}
+.notice_area2 .tb_notice {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.notice_area2 .tb_notice tbody tr {
+    color: #000;
+    font-size: 16px;
+    height: 48px;
+    text-align: left;
+}
+.notice_area2 .tb_notice tbody tr.special {
+    background: none repeat scroll 0 0 #f8f8f8;
+}
+.notice_area2 .tb_notice tbody tr.special .subj {
+    font-family: "hind_m","simhei";
+}
+.notice_area2 .tb_notice tbody tr:first-child {
+    height: 47px;
+}
+.notice_area2 .tb_notice tbody tr:first-child td {
+    border-top: 0 none;
+}
+.notice_area2 .tb_notice tbody td {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #ddd;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 0;
+    word-break: break-all;
+}
+.notice_area2 .tb_notice tbody tr .subj {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    padding: 3px 42px;
+    vertical-align: top;
+}
+.notice_area2 .notice_cont {
+    color: #000;
+    font-size: 16px;
+    padding: 34px 42px 71px;
+}
+.notice_area2 .lnk_lst {
+    text-align: right;
+}
+.dashboard_lst {
+    margin: 0 auto 1px;
+    overflow: hidden;
+    padding-left: 14px;
+    width: 1125px;
+}
+.dashboard_lst li {
+    float: left;
+    margin: 0 14px 14px 0;
+    width: 548px;
+}
+.dashboard_lst li > a {
+    float: left;
+    height: 210px;
+    overflow: hidden;
+    width: 210px;
+}
+.dashboard_lst .info {
+    background: none repeat scroll 0 0 #fff;
+    height: 210px;
+    overflow: hidden;
+    padding-left: 28px;
+    position: relative;
+}
+.dashboard_lst .info > a {
+    cursor: pointer;
+    display: block;
+}
+.dashboard_lst .genre {
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 22px;
+}
+.dashboard_lst .subj {
+    color: #000;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 21px;
+    padding: 6px 28px 0 0;
+}
+.dashboard_lst .grade_area {
+    padding-top: 6px;
+}
+.dashboard_lst .absolute {
+    bottom: 22px;
+    left: 28px;
+    position: absolute;
+}
+.dashboard_lst .update {
+    color: #848484;
+    font-size: 14px;
+    line-height: 16px;
+}
+.dashboard_lst .btnbox {
+    overflow: hidden;
+    padding-top: 22px;
+}
+.dashboard_lst .btnbox a {
+    float: left;
+    margin-right: 4px;
+}
+.challenge_cont_area {
+    float: left;
+    margin-right: 77px;
+    position: relative;
+    width: 731px;
+}
+.challenge_cont_area .sort_area {
+    padding-right: 12px;
+    position: absolute;
+    right: -12px;
+    top: -33px;
+    z-index: 10;
+}
+.challenge_cont_area .sort_area .checked {
+    color: #767676;
+    display: inline-block;
+    vertical-align: top;
+}
+.challenge_cont_area .sort_area .checked .ico_chk {
+    margin: 1px 0 0 9px;
+}
+.challenge_cont_area .sort_box {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ddd;
+    display: none;
+    padding: 9px 0 11px;
+    position: absolute;
+    right: 0;
+    top: -20px;
+    width: 188px;
+    z-index: 10;
+}
+.challenge_cont_area .sort_box li {
+    height: 33px;
+    padding-right: 35px;
+    position: relative;
+    text-align: right;
+}
+.challenge_cont_area .sort_box li:first-child {
+    margin: 0;
+}
+.challenge_cont_area .sort_box a {
+    cursor: pointer;
+    display: block;
+    height: 23px;
+    padding-top: 10px;
+}
+.challenge_cont_area .sort_box .ico_chk {
+    position: absolute;
+    right: 11px;
+    top: 11px;
+}
+.challenge_cont_area .paginate {
+    margin-top: 20px;
+}
+.challenge_spot {
+    background: url("http://webtoons.static.naver.net/image/pc/bg_challenge_v2.png?dt=2014120401") no-repeat scroll 50% 0 #7bde56;
+    height: 287px;
+    position: relative;
+}
+.challenge_spot_inner {
+    margin: 0 auto;
+    padding-top: 54px;
+    position: relative;
+    width: 1118px;
+}
+.challenge_spot_inner .txt_weekly_roundup {
+    left: 42px;
+    position: absolute;
+    top: 31px;
+}
+.challenge_spot_inner .paging .num {
+    position: absolute;
+    right: 41px;
+    top: 38px;
+}
+.challenge_spot_inner .paging .ico_chal_pg {
+    background-position: -240px -830px;
+    float: left;
+    height: 12px;
+    margin-left: 6px;
+    width: 12px;
+}
+.challenge_spot_inner .paging .ico_chal_pg.on {
+    background-position: -240px -850px;
+}
+.challenge_spot_inner .btn_chal_prev, .challenge_spot_inner .btn_chal_next {
+    height: 30px;
+    opacity: 0.6;
+    position: absolute;
+    top: 137px;
+    width: 17px;
+}
+.challenge_spot_inner .btn_chal_prev:hover, .challenge_spot_inner .btn_chal_next:hover {
+    opacity: 1;
+}
+.challenge_spot_inner .btn_chal_prev {
+    background-position: -180px -830px;
+    left: 0;
+}
+.challenge_spot_inner .btn_chal_next {
+    background-position: -210px -830px;
+    right: 0;
+}
+.challenge_spot_rolling {
+    height: 192px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1058px;
+}
+.challenge_spot_list {
+    height: 192px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 32700px;
+}
+.challenge_spot_list li {
+    float: left;
+    height: 192px;
+    margin-left: 10px;
+    width: 202px;
+}
+.challenge_spot_list li:first-child {
+    margin: 0;
+}
+.challenge_spot_list a {
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.challenge_spot_list .img_area {
+    background: none repeat scroll 0 0 #000;
+    height: 190px;
+    left: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: 1px;
+    width: 200px;
+    z-index: 10;
+}
+.challenge_spot_list .img_area img {
+    margin: -13px 0 0 -8px;
+    opacity: 0.8;
+    transition: all 0.3s ease 0s;
+}
+.challenge_spot_list a:hover .img_area img {
+    opacity: 1;
+}
+.challenge_spot_list .skin {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_chal_skin_v2.png?dt=2014120401") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 100%;
+    left: 0;
+    line-height: 999px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+}
+.challenge_spot_list li.rate1 .skin {
+    background-position: 0 0;
+}
+.challenge_spot_list li.rate2 .skin {
+    background-position: 0 -200px;
+}
+.challenge_spot_list li.rate3 .skin {
+    background-position: 0 -400px;
+}
+.challenge_spot_list li.rate4 .skin {
+    background-position: 0 -600px;
+}
+.challenge_spot_list li.rate5 .skin {
+    background-position: 0 -800px;
+}
+.challenge_spot_list .info_area {
+    bottom: 12px;
+    left: 18px;
+    position: absolute;
+    width: 165px;
+    z-index: 30;
+}
+.challenge_spot_list .info_area .subj {
+    color: #fff;
+    font-family: "hind_m","simhei";
+    font-size: 18px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+.challenge_spot_list .info_area .author {
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: -2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+.challenge_big_banner {
+    background: none repeat scroll 0 0 #f5f5f5;
+    height: 130px;
+    position: relative;
+}
+.challenge_big_banner span {
+    left: 50%;
+    margin-left: -600px;
+    position: absolute;
+    top: 0;
+}
+.challenge_lst {
+    overflow: hidden;
+}
+.challenge_lst ul {
+    border-bottom: 1px solid #ddd;
+    margin-right: -25px;
+    overflow: hidden;
+}
+.challenge_lst li {
+    float: left;
+    margin-right: 25px;
+    width: 164px;
+}
+.challenge_lst.search ul {
+    border-bottom: 0 none;
+    margin: 0 -25px 0 15px;
+}
+.challenge_lst.search .challenge_item {
+    height: 272px;
+}
+.challenge_item {
+    display: block;
+    height: 292px;
+    width: 164px;
+}
+.challenge_item .img_area {
+    display: block;
+    height: 164px;
+    overflow: hidden;
+    position: relative;
+    width: 164px;
+}
+.challenge_item .genre {
+    font-size: 13px;
+    line-height: 15px;
+    padding-top: 19px;
+}
+.challenge_item .subj {
+    font-family: "hind_m","simhei";
+    font-size: 18px;
+    line-height: 21px;
+    overflow: hidden;
+    padding-top: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.challenge_item .author {
+    font-size: 13px;
+    line-height: 15px;
+}
+.challenge_item .grade_area {
+    padding-top: 5px;
+}
+.challenge_lst_none {
+    margin-top: 20px;
+    text-align: center;
+}
+.challenge_lst_none .dsc {
+    color: #747474;
+    font-family: "hind_m","simhei";
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 3px;
+}
+.challenge_lst_none .btnarea {
+    margin-top: 23px;
+}
+.aside.challenge {
+    width: 312px;
+}
+.aside.challenge .ban_area {
+    height: 312px;
+    margin-bottom: 45px;
+    position: relative;
+    width: 312px;
+}
+.aside.challenge .ban_area .ban_img {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+.aside.challenge .ban_area .ban_cont {
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+}
+.main_challenge_wrap {
+    border-top: 1px solid #e5e5e5;
+    margin-top: 7px;
+}
+.main_challenge {
+    background: none repeat scroll 0 0 #fff;
+    height: 455px;
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+}
+.main_challenge .title_area {
+    left: 0;
+    position: absolute;
+    top: 66px;
+    z-index: 10;
+}
+.main_challenge .title_area h2 {
+    margin: 0 0 11px 2px;
+}
+.main_challenge .title_area p {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 11px 0 0 5px;
+}
+.main_challenge .title_area .btnarea {
+    margin-top: 23px;
+}
+.main_challenge .bg_character {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_character.png?dt=2014120401") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    bottom: 0;
+    height: 260px;
+    left: 0;
+    position: absolute;
+    width: 306px;
+}
+.main_challenge .bg_character.char1 {
+    background-position: 0 0;
+}
+.main_challenge .bg_character.char2 {
+    background-position: -320px 0;
+}
+.main_challenge .bg_character.char3 {
+    background-position: 0 -270px;
+}
+.main_challenge .bg_character.char4 {
+    background-position: -320px -270px;
+}
+.main_challenge .update {
+    color: #ababab;
+    font-size: 13px;
+    line-height: 15px;
+    position: absolute;
+    right: 4px;
+    top: 34px;
+}
+.main_challenge .challenge_spot_list {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+}
+.main_challenge .challenge_spot_list li {
+    height: 162px;
+    margin: 0;
+    position: absolute;
+    width: 170px;
+}
+.main_challenge .challenge_spot_list li.rate1 {
+    height: 162px;
+    left: 310px;
+    top: 60px;
+    width: 170px;
+}
+.main_challenge .challenge_spot_list li.rate2 {
+    left: 490px;
+    top: 60px;
+}
+.main_challenge .challenge_spot_list li.rate3 {
+    left: 670px;
+    top: 60px;
+}
+.main_challenge .challenge_spot_list li.rate4 {
+    left: 850px;
+    top: 60px;
+}
+.main_challenge .challenge_spot_list li.rate5 {
+    left: 1030px;
+    top: 60px;
+}
+.main_challenge .challenge_spot_list li.rate6 {
+    left: 310px;
+    top: 233px;
+}
+.main_challenge .challenge_spot_list li.rate7 {
+    left: 490px;
+    top: 233px;
+}
+.main_challenge .challenge_spot_list li.rate8 {
+    left: 670px;
+    top: 233px;
+}
+.main_challenge .challenge_spot_list li.rate9 {
+    left: 850px;
+    top: 233px;
+}
+.main_challenge .challenge_spot_list li.rate10 {
+    left: 1030px;
+    top: 233px;
+}
+.main_challenge .challenge_spot_list .img_area {
+    height: 162px !important;
+    left: 0;
+    top: 0;
+    width: 170px !important;
+}
+.main_challenge .challenge_spot_list .img_area img {
+    margin: 0;
+}
+.main_challenge .challenge_spot_list .skin {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_ico_v5.png?dt=2014120401") no-repeat scroll 0 -760px rgba(0, 0, 0, 0) !important;
+}
+.main_challenge .challenge_spot_list [class^="ico_"] {
+    bottom: 57px;
+    left: 13px;
+    position: absolute;
+    z-index: 30;
+}
+.main_challenge .challenge_spot_list .info_area {
+    bottom: 12px !important;
+    left: 16px !important;
+    width: 140px !important;
+}
+.main_challenge .challenge_spot_list .info_area .subj {
+    font-size: 22px;
+    line-height: 25px;
+}
+.main_challenge .challenge_spot_list .info_area .author {
+    font-size: 16px;
+    line-height: 18px;
+}
+.publish_tab {
+    margin-left: 462px;
+    overflow: hidden;
+}
+.publish_tab li {
+    float: left;
+}
+.publish_tab li.on .ico_pub01 {
+    background-position: -240px -480px;
+}
+.publish_tab li.on .ico_pub02 {
+    background-position: -280px -480px;
+}
+.publish_tab li.arr {
+    margin: 0 45px;
+}
+.publish_tab a {
+    display: block;
+    height: 51px;
+    padding-top: 16px;
+}
+.publish_tab span {
+    vertical-align: middle !important;
+}
+.publish_tab .txt_series, .publish_tab .txt_episodes {
+    margin: 2px 0 0 11px;
+}
+.publish_wrap {
+    margin: 0 auto;
+    padding: 43px 0 249px;
+    position: relative;
+    width: 824px;
+}
+.publish_wrap:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.publish_thumb_area {
+    float: left;
+    width: 274px;
+}
+.publish_title {
+    font-family: "hind_m","simhei";
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-top: 26px;
+    padding-bottom: 4px;
+}
+.publish_title:first-child {
+    margin-top: 0;
+}
+.publish_title.v2 {
+    margin-top: 16px;
+}
+.publish_thumb_info {
+    color: #9e9e9e;
+    font-family: "hind_m","simhei";
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 13px;
+}
+.publish_form_area {
+    float: left;
+    width: 550px;
+}
+.publish_form_select {
+    min-height: 41px;
+    position: relative;
+    z-index: 20;
+}
+.publish_form_select .select1 {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 218px;
+}
+.publish_form_input {
+    position: relative;
+}
+.publish_form_input .input_txt {
+    width: 492px;
+}
+.publish_form_input .input_txt.v2 {
+    padding: 0 138px 0 28px;
+    width: 382px;
+}
+.publish_form_input .placeholder {
+    color: #bababa;
+    font-family: "hind_m","simhei";
+    font-size: 16px;
+    left: 29px;
+    line-height: 18px;
+    position: absolute;
+    top: 13px;
+    z-index: 10;
+}
+.publish_form_input .placeholder.v2 {
+    top: 18px;
+}
+.publish_form_input .txtarea {
+    height: 234px;
+    overflow: hidden;
+    padding: 14px 28px;
+    width: 492px;
+}
+.publish_form_input .file_size {
+    color: #000;
+    font-family: "hind_m","simhei";
+    font-size: 16px;
+    line-height: 18px;
+    position: absolute;
+    right: 0;
+    top: 28px;
+}
+.publish_form_input .file_size strong {
+    color: #2edc00;
+    font-weight: normal;
+}
+.publish_form_input .file_size .ico_bar {
+    margin: 0 4px 0 3px;
+    vertical-align: middle;
+}
+.publish_form_input .lk_verification {
+    background: none repeat scroll 0 0 #b4b4b4;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 41px;
+    line-height: 41px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 116px;
+    z-index: 10;
+}
+.publish_form_input .lk_verification span {
+    vertical-align: middle;
+}
+.publish_form_input.episode_title .input_txt {
+    padding: 0 28px 0 106px;
+    width: 414px;
+}
+.publish_form_input.episode_title .placeholder {
+    left: 107px;
+}
+.publish_form_input.episode_title .episode_num {
+    border-right: 1px solid #b4b4b4;
+    color: #000;
+    font-family: "hind_m","simhei";
+    font-size: 16px;
+    height: 41px;
+    left: 0;
+    line-height: 44px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 86px;
+}
+.publish_form_filelist {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #b4b4b4;
+    border-radius: 15px;
+    height: 186px;
+    margin-top: 15px;
+    padding: 10px 7px 10px 9px;
+    position: relative;
+    width: 532px;
+}
+.publish_form_filelist .filelist_dsc {
+    color: #000;
+    font-family: "hind_m","simhei";
+    font-size: 16px;
+    left: 0;
+    line-height: 18px;
+    position: absolute;
+    text-align: center;
+    top: 93px;
+    width: 100%;
+    z-index: 10;
+}
+.publish_form_filelist .imgfile_list {
+    padding-right: 11px;
+    word-break: break-all;
+}
+.publish_form_filelist .imgfile_list li {
+    color: #878787;
+    cursor: move;
+    font-family: "hind_m","simhei";
+    font-size: 15px;
+    height: 33px;
+    line-height: 33px;
+    overflow: hidden;
+    padding-left: 19px;
+}
+.publish_form_filelist .imgfile_list li:hover {
+    background: none repeat scroll 0 0 #f3f3f3;
+}
+.publish_form_filelist .imgfile_list li.move {
+    border: 2px dashed #d8d8d8;
+    color: #555;
+    height: 29px;
+    line-height: 29px;
+    padding-left: 17px;
+}
+.publish_form_filelist .imgfile_list li.move:hover {
+    background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+}
+.publish_form_filelist .imgfile_list .btn_delete4 {
+    margin: -2px 14px 0 0;
+    vertical-align: middle;
+}
+.publish_form_filelist .imgfile_list.moving li {
+    opacity: 0.3;
+}
+.publish_form_filelist .imgfile_list.moving li.move {
+    opacity: 1;
+}
+.publish_form_btn {
+    margin-top: 30px;
+}
+.publish_form_btn a {
+    margin-right: 10px;
+}
+.publish_form_btn .txt_btn_createseries {
+    margin-bottom: 59px;
+}
+.publish_form_dsc {
+    color: #9e9e9e;
+    font-family: "hind_m","simhei";
+    font-size: 15px;
+    line-height: 20px;
+    margin: 13px 0 -6px;
+}
+.publish_form_dsc2 {
+    border-bottom: 1px solid #e5e5e5;
+    color: #929292;
+    font-family: "hind_m","simhei";
+    font-size: 15px;
+    line-height: 20px;
+    padding: 17px 0 14px 30px;
+}
+.publish_form_dsc2 .caution {
+    color: #ff5039;
+}
+.publish_form_dsc3 {
+    color: #000;
+    font-family: "hind_m","simhei";
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: -6px;
+    padding: 17px 0 0 40px;
+    position: relative;
+    white-space: nowrap;
+}
+.publish_form_dsc3 a {
+    color: #2fd51b;
+    text-decoration: underline;
+}
+.publish_form_dsc3 .chk_area {
+    left: 0;
+    position: absolute;
+    top: 22px;
+}
+.publish_help {
+    bottom: 271px;
+    height: 172px;
+    left: 50%;
+    margin-left: -412px;
+    position: absolute;
+    width: 824px;
+    z-index: 10;
+}
+.publish_help .help_dsc1 {
+    margin-top: 48px;
+}
+.publish_help .help_dsc2 {
+    color: #9c9c9c;
+    font-family: "hind_m","simhei";
+    font-size: 15px;
+    line-height: 17px;
+    margin-top: 8px;
+}
+.publish_help .help_dsc3 {
+    color: #000;
+    font-family: "hind_m","simhei";
+    font-size: 15px;
+    line-height: 17px;
+    margin-top: 15px;
+}
+.publish_help .help_dsc3 .ico_arr6 {
+    margin: 0 0 0 8px;
+    vertical-align: middle;
+}
+.publish_help .help_img {
+    bottom: 0;
+    height: 172px;
+    position: absolute;
+    right: 0;
+    width: 292px;
+}
+.pop_upload {
+    background: url("http://webtoons.static.naver.net/image/pc/bg_popup.jpg?dt=2014120401") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 820px;
+    width: 600px;
+}
+.pop_upload .title {
+    padding: 48px 0 0 28px;
+}
+.pop_upload .dsc {
+    padding: 16px 0 0 27px;
+}
+.pop_upload .upload_cont {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #dedede;
+    height: 557px;
+    margin: 23px auto 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px 17px 20px;
+    width: 504px;
+}
+.tw .pop_upload .upload_cont, .cn .pop_upload .upload_cont {
+    height: 580px;
+}
+.pop_upload .upload_cont h2 {
+    color: #232323;
+    font-family: "hind_m","simhei";
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 22px;
+    margin-top: 22px;
+}
+.pop_upload .upload_cont h3 {
+    color: #232323;
+    font-family: "hind_m","simhei";
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 22px;
+    margin: 2px 0 0 14px;
+}
+.pop_upload .upload_cont dl {
+    margin-left: 14px;
+}
+.pop_upload .upload_cont dt {
+    color: #858585;
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 13px;
+}
+.pop_upload .upload_cont dd {
+    color: #858585;
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 2px;
+    padding-left: 18px;
+    text-indent: -18px;
+}
+.pop_upload .upload_cont p {
+    color: #858585;
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 10px;
+}
+.pop_upload .pop_copyright {
+    margin-top: 24px;
+    text-align: center;
+}
+.browsebutton {
+    height: 218px;
+    position: relative;
+    width: 218px;
+}
+.browsebutton .browse-output {
+    border: 1px solid #aaa;
+    display: block;
+    height: 21px;
+    margin-right: 5px;
+    overflow: hidden;
+    padding: 0 5px;
+    position: absolute;
+    width: 180px;
+}
+.browsebutton .browse-box {
+    background-color: gray;
+    height: 100%;
+    left: 0;
+    opacity: 0 !important;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 32000;
+}
+.browsebutton .browse-file-input {
+    border: 0 none;
+    cursor: pointer;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+.browsebutton .browse-button {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+.browsebutton .browse-button .before {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_thumb_upload.png?dt=2014120401") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 100%;
+    width: 100%;
+}
+.browsebutton .browse-button .before p {
+    bottom: 24px;
+    font-family: "hind_m","simhei";
+    font-size: 15px;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.browsebutton .browse-button .before img {
+    display: none;
+}
+.browsebutton .browse-button .after {
+    border-radius: 13px;
+    height: 100%;
+    width: 100%;
+}
+.browsebutton .browse-button .after img {
+    border-radius: 13px;
+}
+.browsebutton .browse-applied {
+    display: block;
+}
+.browsebutton .browse-over .before {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_thumb_upload.png?dt=2014120401") no-repeat scroll -230px 0 rgba(0, 0, 0, 0);
+}
+.browsebutton .browse-over .before p {
+    color: #aaa;
+}
+.browsebutton .browse-over .after {
+    background: none repeat scroll 0 0 #000;
+}
+.browsebutton .browse-over .after p {
+    bottom: 24px;
+    color: #aaa;
+    font-family: "hind_m","simhei";
+    font-size: 15px;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
+.browsebutton .browse-over .after img {
+    opacity: 0.4;
+}
+.browsebutton .browse-over .after .icon_arr {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_thumb_upload.png?dt=2014120401") no-repeat scroll -318px -72px rgba(0, 0, 0, 0);
+    height: 51px;
+    left: 88px;
+    position: absolute;
+    top: 72px;
+    width: 42px;
+}
+#fileName {
+    display: none;
+}
+.browsebutton .browse-button .loading {
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+}
+.browsebutton.v2 {
+    height: 146px;
+    width: 154px;
+}
+.browsebutton.v2 .browse-button .before {
+    background-position: 0 -230px;
+}
+.browsebutton.v2 .browse-button .before p {
+    bottom: 44px;
+    line-height: 18px;
+}
+.browsebutton.v2 .browse-over .before {
+    background-position: -170px -230px;
+}
+.browsebutton.v2 .browse-over .before p {
+    color: #aaa;
+}
+.browsebutton.v2 .browse-over .after p {
+    bottom: 44px;
+}
+.browsebutton.v3 {
+    height: 41px;
+    width: 380px;
+}
+#scrollbox {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.scrollbar-box {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.scrollbar-content {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.scrollbar-v {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 13px;
+}
+.scrollbar-v .scrollbar-track {
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 13px;
+}
+.scrollbar-v .scrollbar-thumb {
+    background: none repeat scroll 0 0 #ececec;
+    border: 1px solid #e1e1e1;
+    border-radius: 7px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 11px;
+}
+.scrollbar-show {
+    display: block;
+}
+.scrollbar-noscript .scrollbar-box {
+    overflow: auto;
+}
+.scrollbar-noscript .scrollbar-h, .scrollbar-noscript .scrollbar-v, scrollbar-noscript .scrollbar-disabled {
+    display: none;
+}
+[class^="txt_"], [class*="txt_"] {
+    background: url("http://webtoons.static.naver.net/image/pc/sp_txt_v6.png?dt=2014120401") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    line-height: 999px;
+    overflow: hidden;
+    vertical-align: top;
+}
+.txt_ico_new {
+    background-position: -330px -800px;
+    height: 30px;
+    width: 30px;
+}
+.txt_ico_new2 {
+    background-position: -330px -840px;
+    height: 26px;
+    width: 26px;
+}
+.txt_ico_up {
+    background-position: -370px -800px;
+    height: 30px;
+    width: 30px;
+}
+.txt_ico_up2 {
+    background-position: -360px -840px;
+    height: 26px;
+    width: 26px;
+}
+.txt_ico_hiatus {
+    background-position: -410px -800px;
+    height: 30px;
+    width: 30px;
+}
+.txt_ico_hiatus2 {
+    background-position: -390px -840px;
+    height: 26px;
+    width: 26px;
+}
+.txt_ico_hot {
+    background-position: -450px -800px;
+    height: 30px;
+    width: 30px;
+}
+.txt_ico_hot2 {
+    background-position: -420px -840px;
+    height: 26px;
+    width: 26px;
+}
+.txt_ico_best {
+    background-position: -490px -800px;
+    height: 30px;
+    width: 30px;
+}
+.txt_ico_best2 {
+    background-position: -450px -840px;
+    height: 26px;
+    width: 26px;
+}
+.txt_ico_completed {
+    background-position: -530px -800px;
+    height: 30px;
+    width: 30px;
+}
+.txt_ico_completed2 {
+    background-position: -480px -840px;
+    height: 26px;
+    width: 26px;
+}
+.txt_publish {
+    background-position: -560px -60px;
+    height: 12px;
+    width: 45px;
+}
+.txt_close {
+    background-position: -510px -60px;
+    height: 12px;
+    width: 35px;
+}
+.txt_close2 {
+    background-position: -570px -190px;
+    height: 12px;
+    width: 35px;
+}
+.txt_close3 {
+    background-position: -400px -420px;
+    height: 13px;
+    width: 38px;
+}
+.txt_clear_recent {
+    background-position: -430px -190px;
+    height: 12px;
+    width: 134px;
+}
+.txt_clear_recent2 {
+    background-position: -450px -420px;
+    height: 13px;
+    width: 149px;
+}
+.txt_feedback {
+    background-position: -390px -110px;
+    height: 13px;
+    width: 69px;
+}
+.txt_help {
+    background-position: -470px -110px;
+    height: 17px;
+    width: 33px;
+}
+.txt_terms {
+    background-position: -510px -110px;
+    height: 13px;
+    width: 89px;
+}
+.txt_terms2 {
+    background-position: -410px -80px;
+    height: 13px;
+    width: 92px;
+}
+.txt_more {
+    background-position: -590px -80px;
+    height: 15px;
+    width: 52px;
+}
+.txt_ranking1 {
+    background-position: 0 -80px;
+    height: 15px;
+    width: 169px;
+}
+.txt_ranking2 {
+    background-position: -180px -80px;
+    height: 15px;
+    width: 217px;
+}
+.txt_ranking3 {
+    background-position: -400px -390px;
+    height: 20px;
+    width: 77px;
+}
+.txt_ranking4 {
+    background-position: -480px -390px;
+    height: 20px;
+    width: 119px;
+}
+.txt_ranking5 {
+    background-position: 0 -500px;
+    height: 14px;
+    width: 151px;
+}
+.txt_ranking6 {
+    background-position: -170px -500px;
+    height: 14px;
+    width: 194px;
+}
+.txt_sort_genre1 {
+    background-position: -20px -140px;
+    height: 14px;
+    width: 17px;
+}
+.txt_sort_genre2 {
+    background-position: -50px -140px;
+    height: 17px;
+    width: 108px;
+}
+.txt_sort_genre3 {
+    background-position: -170px -140px;
+    height: 14px;
+    width: 120px;
+}
+.txt_sort_genre4 {
+    background-position: -300px -140px;
+    height: 17px;
+    width: 58px;
+}
+.txt_sort_genre5 {
+    background-position: -370px -140px;
+    height: 14px;
+    width: 72px;
+}
+.txt_sort_genre6 {
+    background-position: -460px -140px;
+    height: 14px;
+    width: 46px;
+}
+.txt_sort_age1 {
+    background-position: -20px -170px;
+    height: 14px;
+    width: 87px;
+}
+.txt_sort_age2 {
+    background-position: -120px -170px;
+    height: 14px;
+    width: 102px;
+}
+.txt_sort_age3 {
+    background-position: -240px -170px;
+    height: 14px;
+    width: 87px;
+}
+.txt_sort_age4 {
+    background-position: -340px -170px;
+    height: 14px;
+    width: 102px;
+}
+.txt_sort_age5 {
+    background-position: -20px -190px;
+    height: 14px;
+    width: 87px;
+}
+.txt_sort_age6 {
+    background-position: -120px -190px;
+    height: 14px;
+    width: 102px;
+}
+.txt_rate {
+    background-position: 0 -250px;
+    height: 16px;
+    width: 96px;
+}
+.txt_update {
+    background-position: -110px -250px;
+    height: 16px;
+    width: 85px;
+}
+.txt_read_count {
+    background-position: -200px -110px;
+    height: 16px;
+    width: 122px;
+}
+.txt_result_all {
+    background-position: -410px -640px;
+    height: 13px;
+    width: 76px;
+}
+.txt_result_webtoon {
+    background-position: -500px -640px;
+    height: 13px;
+    width: 126px;
+}
+.txt_result_challenge {
+    background-position: -410px -660px;
+    height: 17px;
+    width: 186px;
+}
+.txt_mywebtoon {
+    background-position: 0 -110px;
+    height: 19px;
+    width: 95px;
+}
+.txt_login {
+    background-position: -610px -60px;
+    height: 14px;
+    width: 37px;
+}
+.txt_login2 {
+    background-position: -440px -500px;
+    height: 18px;
+    width: 46px;
+}
+.txt_logout {
+    background-position: -490px -500px;
+    height: 18px;
+    width: 58px;
+}
+.txt_detail {
+    background-position: -320px -250px;
+    height: 21px;
+    width: 147px;
+}
+.txt_selectall {
+    background-position: -520px -320px;
+    height: 14px;
+    width: 65px;
+}
+.txt_btn_edit {
+    background-position: -200px -760px;
+    height: 33px;
+    width: 88px;
+}
+.txt_btn_delete {
+    background-position: -300px -760px;
+    height: 33px;
+    width: 86px;
+}
+.txt_btn_cancel {
+    background-position: -400px -760px;
+    height: 33px;
+    width: 88px;
+}
+.txt_comments {
+    background-position: -480px -250px;
+    height: 16px;
+    width: 96px;
+}
+.txt_mon {
+    background-position: -40px -440px;
+    height: 14px;
+    width: 39px;
+}
+.txt_mon:hover {
+    background-position: -330px -530px;
+}
+.txt_tue {
+    background-position: -90px -440px;
+    height: 14px;
+    width: 30px;
+}
+.txt_tue:hover {
+    background-position: -380px -530px;
+}
+.txt_wed {
+    background-position: -130px -440px;
+    height: 14px;
+    width: 38px;
+}
+.txt_wed:hover {
+    background-position: -420px -530px;
+}
+.txt_thu {
+    background-position: -180px -440px;
+    height: 14px;
+    width: 31px;
+}
+.txt_thu:hover {
+    background-position: -470px -530px;
+}
+.txt_fri {
+    background-position: -220px -440px;
+    height: 14px;
+    width: 22px;
+}
+.txt_fri:hover {
+    background-position: -510px -530px;
+}
+.txt_sat {
+    background-position: -250px -440px;
+    height: 14px;
+    width: 29px;
+}
+.txt_sat:hover {
+    background-position: -540px -530px;
+}
+.txt_sun {
+    background-position: -290px -440px;
+    height: 14px;
+    width: 31px;
+}
+.txt_sun:hover {
+    background-position: -580px -530px;
+}
+.txt_comp {
+    background-position: -80px -530px;
+    height: 21px;
+    width: 98px;
+}
+.txt_drama {
+    background-position: 0 -480px;
+    height: 13px;
+    width: 47px;
+}
+.txt_fantasy {
+    background-position: -60px -480px;
+    height: 17px;
+    width: 54px;
+}
+.txt_comedy {
+    background-position: -120px -480px;
+    height: 17px;
+    width: 62px;
+}
+.txt_action {
+    background-position: -190px -480px;
+    height: 14px;
+    width: 46px;
+}
+.txt_slice_of_life {
+    background-position: -250px -480px;
+    height: 14px;
+    width: 79px;
+}
+.txt_romance {
+    background-position: -340px -480px;
+    height: 13px;
+    width: 67px;
+}
+.txt_heartwarming {
+    background-position: -420px -480px;
+    height: 18px;
+    width: 102px;
+}
+.txt_thriller {
+    background-position: -530px -480px;
+    height: 14px;
+    width: 52px;
+}
+.txt_historical {
+    background-position: -190px -530px;
+    height: 14px;
+    width: 66px;
+}
+.txt_sports {
+    background-position: -270px -530px;
+    height: 18px;
+    width: 46px;
+}
+.txt_setting {
+    background-position: -570px -280px;
+    height: 19px;
+    width: 62px;
+}
+.txt_favorites {
+    background-position: -520px -130px;
+    height: 14px;
+    width: 71px;
+}
+.txt_recently {
+    background-position: -630px -110px;
+    height: 116px;
+    width: 14px;
+}
+.txt_recently2 {
+    background-position: -450px -160px;
+    height: 29px;
+    width: 54px;
+}
+.txt_btn_rate {
+    background-position: -500px -760px;
+    height: 23px;
+    width: 54px;
+}
+.txt_btn_first {
+    background-position: 0 -810px;
+    height: 43px;
+    width: 139px;
+}
+.txt_btn_read {
+    background-position: -150px -810px;
+    height: 43px;
+    width: 171px;
+}
+.txt_btn_edit2 {
+    background-position: -480px -690px;
+    height: 26px;
+    width: 42px;
+}
+.txt_btn_delete2 {
+    background-position: -530px -690px;
+    height: 26px;
+    width: 60px;
+}
+.txt_btn_edit3 {
+    background-position: -480px -720px;
+    height: 23px;
+    width: 40px;
+}
+.txt_btn_delete3 {
+    background-position: -530px -720px;
+    height: 23px;
+    width: 57px;
+}
+.txt_btn_edit4 {
+    background-position: -190px -720px;
+    height: 28px;
+    width: 66px;
+}
+.txt_btn_delete4 {
+    background-position: -270px -720px;
+    height: 28px;
+    width: 70px;
+}
+.txt_btn_edit5 {
+    background-position: -390px -1160px;
+    height: 20px;
+    width: 36px;
+}
+.txt_btn_edit5:hover {
+    background-position: -390px -1190px;
+}
+.txt_btn_delete5 {
+    background-position: -430px -1160px;
+    height: 20px;
+    width: 50px;
+}
+.txt_btn_delete5:hover {
+    background-position: -430px -1190px;
+}
+.txt_btn_add_episode {
+    background-position: -350px -720px;
+    height: 28px;
+    width: 120px;
+}
+.txt_btn_create {
+    background-position: 0 -720px;
+    height: 33px;
+    width: 181px;
+}
+.txt_btn_create2 {
+    background-position: 0 -760px;
+    height: 40px;
+    width: 186px;
+}
+.txt_notice {
+    background-position: -520px -80px;
+    height: 14px;
+    width: 59px;
+}
+.txt_btn_list {
+    background-position: -560px -760px;
+    height: 33px;
+    width: 88px;
+}
+.txt_series {
+    background-position: -560px -560px;
+    height: 12px;
+    width: 49px;
+}
+.txt_episodes {
+    background-position: -560px -580px;
+    height: 12px;
+    width: 72px;
+}
+.txt_btn_createseries {
+    background-position: -330px -870px;
+    height: 43px;
+    width: 185px;
+}
+.txt_btn_editseries {
+    background-position: 0 -1060px;
+    height: 43px;
+    width: 185px;
+}
+.txt_publish_help {
+    background-position: 0 -920px;
+    height: 17px;
+    width: 258px;
+}
+.txt_selectseries {
+    background-position: -400px -280px;
+    height: 16px;
+    width: 144px;
+}
+.txt_btn_createseries2 {
+    background-position: -330px -920px;
+    height: 33px;
+    width: 148px;
+}
+.txt_btn_preview {
+    background-position: 0 -960px;
+    height: 43px;
+    width: 185px;
+}
+.txt_btn_createepisode {
+    background-position: -195px -960px;
+    height: 43px;
+    width: 185px;
+}
+.txt_btn_editepisode {
+    background-position: -190px -1060px;
+    height: 43px;
+    width: 185px;
+}
+.txt_btn_chooseupload {
+    background-position: 0 -1010px;
+    height: 41px;
+    width: 380px;
+}
+.txt_my_webtoon {
+    background-position: -390px -960px;
+    height: 15px;
+    width: 71px;
+}
+.txt_my_challenge {
+    background-position: -390px -980px;
+    height: 19px;
+    width: 136px;
+}
+.txt_viewall {
+    background-position: -400px -330px;
+    height: 12px;
+    width: 60px;
+}
+.txt_viewall2 {
+    background-position: -400px -310px;
+    height: 13px;
+    width: 68px;
+}
+.txt_verification {
+    background-position: -110px -110px;
+    height: 12px;
+    width: 72px;
+}
+.txt_btn_gotohome {
+    background-position: 0 -1110px;
+    height: 40px;
+    width: 378px;
+}
+.txt_btn_gotochallenge {
+    background-position: 0 -1160px;
+    height: 40px;
+    width: 378px;
+}
+.txt_challenge {
+    background-position: -390px -1010px;
+    height: 83px;
+    width: 246px;
+}
+.txt_btn_findout {
+    background-position: -490px -920px;
+    height: 33px;
+    width: 148px;
+}
+.txt_btn_submit {
+    background-position: -520px -870px;
+    height: 40px;
+    width: 130px;
+}
+.txt_operational {
+    background-position: 0 -1210px;
+    height: 29px;
+    width: 244px;
+}
+.txt_operational_dsc {
+    background-position: 0 -1250px;
+    height: 60px;
+    width: 525px;
+}
+.txt_btn_publish {
+    background-position: -390px -1110px;
+    height: 43px;
+    width: 185px;
+}
+.txt_weekly_roundup {
+    background-position: -270px -1220px;
+    height: 20px;
+    width: 179px;
+}
+.lnb .txt_m01 {
+    background-position: 0 0;
+    height: 21px;
+    width: 126px;
+}
+.lnb .txt_m02 {
+    background-position: -140px 0;
+    height: 17px;
+    width: 61px;
+}
+.lnb .txt_m03 {
+    background-position: -220px 0;
+    height: 21px;
+    width: 106px;
+}
+.lnb .txt_m04 {
+    background-position: -350px 0;
+    height: 21px;
+    width: 156px;
+}
+.lnb .txt_m05 {
+    background-position: 0 -560px;
+    height: 54px;
+    width: 155px;
+}
+.lnb a:hover .txt_m01, .lnb li.on .txt_m01 {
+    background-position: 0 -30px;
+}
+.lnb a:hover .txt_m02, .lnb li.on .txt_m02 {
+    background-position: -140px -30px;
+}
+.lnb a:hover .txt_m03, .lnb li.on .txt_m03 {
+    background-position: -220px -30px;
+}
+.lnb a:hover .txt_m04, .lnb li.on .txt_m04 {
+    background-position: -350px -30px;
+}
+.lnb a:hover .txt_m05, .lnb li.on .txt_m05 {
+    background-position: -520px -30px;
+}
+.lnb a:hover .txt_m05, .lnb li.on .txt_m05 {
+    background-position: 0 -560px;
+}
+.lnb .m05 {
+    margin-left: 4px;
+    padding-left: 21px;
+    position: relative;
+    top: -1px;
+}
+.lnb .m05 .bar {
+    background: none repeat scroll 0 0 #e5e5e5;
+    display: block;
+    height: 31px;
+    left: 0;
+    position: absolute;
+    top: 16px;
+}
+.lnb .m05 a {
+    height: auto;
+    padding: 0;
+}
+.snb .txt_all {
+    background-position: 0 -860px;
+    height: 12px;
+    width: 26px;
+}
+.snb .txt_drama {
+    background-position: 0 -210px;
+    height: 12px;
+    width: 52px;
+}
+.snb .txt_fantasy {
+    background-position: -60px -210px;
+    height: 12px;
+    width: 61px;
+}
+.snb .txt_comedy {
+    background-position: -130px -210px;
+    height: 12px;
+    width: 62px;
+}
+.snb .txt_action {
+    background-position: -200px -210px;
+    height: 12px;
+    width: 54px;
+}
+.snb .txt_slice_of_life {
+    background-position: -260px -210px;
+    height: 12px;
+    width: 92px;
+}
+.snb .txt_romance {
+    background-position: -360px -210px;
+    height: 12px;
+    width: 72px;
+}
+.snb .txt_heartwarming {
+    background-position: -440px -210px;
+    height: 12px;
+    width: 116px;
+}
+.snb .txt_thriller {
+    background-position: -560px -210px;
+    height: 12px;
+    width: 63px;
+}
+.snb .txt_historical {
+    background-position: -40px -860px;
+    height: 12px;
+    width: 82px;
+}
+.snb .txt_sports {
+    background-position: -130px -860px;
+    height: 12px;
+    width: 54px;
+}
+.snb .txt_others {
+    background-position: -450px -440px;
+    height: 12px;
+    width: 56px;
+}
+.snb a:hover .txt_all {
+    background-position: 0 -880px;
+}
+.snb a:hover .txt_drama {
+    background-position: 0 -620px;
+}
+.snb a:hover .txt_fantasy {
+    background-position: -60px -620px;
+}
+.snb a:hover .txt_comedy {
+    background-position: -130px -620px;
+}
+.snb a:hover .txt_action {
+    background-position: -200px -620px;
+}
+.snb a:hover .txt_slice_of_life {
+    background-position: -260px -620px;
+}
+.snb a:hover .txt_romance {
+    background-position: -360px -620px;
+}
+.snb a:hover .txt_heartwarming {
+    background-position: -440px -620px;
+}
+.snb a:hover .txt_thriller {
+    background-position: -560px -620px;
+}
+.snb a:hover .txt_historical {
+    background-position: -40px -880px;
+}
+.snb a:hover .txt_sports {
+    background-position: -130px -880px;
+}
+.snb a:hover .txt_others {
+    background-position: -520px -440px;
+}
+.snb li.on .txt_all {
+    background-position: 0 -900px;
+}
+.snb li.on .txt_drama {
+    background-position: 0 -230px;
+}
+.snb li.on .txt_fantasy {
+    background-position: -60px -230px;
+}
+.snb li.on .txt_comedy {
+    background-position: -130px -230px;
+}
+.snb li.on .txt_action {
+    background-position: -200px -230px;
+}
+.snb li.on .txt_slice_of_life {
+    background-position: -260px -230px;
+}
+.snb li.on .txt_romance {
+    background-position: -360px -230px;
+}
+.snb li.on .txt_heartwarming {
+    background-position: -440px -230px;
+}
+.snb li.on .txt_thriller {
+    background-position: -560px -230px;
+}
+.snb li.on .txt_historical {
+    background-position: -40px -900px;
+}
+.snb li.on .txt_sports {
+    background-position: -130px -900px;
+}
+.snb li.on .txt_others {
+    background-position: -590px -440px;
+}
+.snb .txt_favorites {
+    background-position: -320px -560px;
+    height: 12px;
+    width: 99px;
+}
+.snb .txt_dashboard {
+    background-position: -430px -560px;
+    height: 12px;
+    width: 113px;
+}
+.snb a:hover .txt_favorites {
+    background-position: -320px -580px;
+}
+.snb a:hover .txt_dashboard {
+    background-position: -430px -580px;
+}
+.snb li.on .txt_favorites {
+    background-position: -320px -600px;
+}
+.snb li.on .txt_dashboard {
+    background-position: -430px -600px;
+}
+.snb .txt_terms {
+    background-position: -400px -370px;
+    height: 14px;
+    width: 114px;
+}
+.snb .txt_privacy {
+    background-position: -520px -370px;
+    height: 14px;
+    width: 126px;
+}
+.snb li.on .txt_terms {
+    background-position: -400px -350px;
+}
+.snb li.on .txt_privacy {
+    background-position: -520px -350px;
+}
+.login_area .txt_login2, .ly_loginbox.bg_wh .txt_login2 {
+    background-position: -390px -500px;
+}
+.daily_tab .txt_daily_tab1 {
+    background-position: -60px -60px;
+    width: 42px;
+}
+.daily_tab .txt_daily_tab2 {
+    background-position: -120px -60px;
+    width: 33px;
+}
+.daily_tab .txt_daily_tab3 {
+    background-position: -170px -60px;
+    width: 41px;
+}
+.daily_tab .txt_daily_tab4 {
+    background-position: -230px -60px;
+    width: 34px;
+}
+.daily_tab .txt_daily_tab5 {
+    background-position: -280px -60px;
+    width: 24px;
+}
+.daily_tab .txt_daily_tab6 {
+    background-position: -320px -60px;
+    width: 32px;
+}
+.daily_tab .txt_daily_tab7 {
+    background-position: -370px -60px;
+    width: 35px;
+}
+.ranking_tab .txt_tab_genre1 {
+    background-position: 0 -280px;
+    height: 12px;
+    margin-top: 27px;
+    width: 24px;
+}
+.ranking_tab .txt_tab_genre2 {
+    background-position: -30px -280px;
+    height: 28px;
+    margin-top: 19px;
+    width: 67px;
+}
+.ranking_tab .txt_tab_genre3 {
+    background-position: -100px -280px;
+    height: 28px;
+    margin-top: 19px;
+    width: 66px;
+}
+.ranking_tab .txt_tab_genre4 {
+    background-position: -180px -280px;
+    height: 12px;
+    margin-top: 27px;
+    width: 58px;
+}
+.ranking_tab .txt_tab_genre5 {
+    background-position: -250px -280px;
+    height: 12px;
+    margin-top: 27px;
+    width: 85px;
+}
+.ranking_tab .txt_tab_genre6 {
+    background-position: -340px -280px;
+    height: 12px;
+    margin-top: 27px;
+    width: 51px;
+}
+.ranking_tab a:hover .txt_tab_genre1 {
+    background-position: 0 -640px;
+}
+.ranking_tab a:hover .txt_tab_genre2 {
+    background-position: -30px -640px;
+}
+.ranking_tab a:hover .txt_tab_genre3 {
+    background-position: -100px -640px;
+}
+.ranking_tab a:hover .txt_tab_genre4 {
+    background-position: -180px -640px;
+}
+.ranking_tab a:hover .txt_tab_genre5 {
+    background-position: -250px -640px;
+}
+.ranking_tab a:hover .txt_tab_genre6 {
+    background-position: -340px -640px;
+}
+.ranking_tab li.on .txt_tab_genre1 {
+    background-position: 0 -320px;
+}
+.ranking_tab li.on .txt_tab_genre2 {
+    background-position: -30px -320px;
+}
+.ranking_tab li.on .txt_tab_genre3 {
+    background-position: -100px -320px;
+}
+.ranking_tab li.on .txt_tab_genre4 {
+    background-position: -180px -320px;
+}
+.ranking_tab li.on .txt_tab_genre5 {
+    background-position: -250px -320px;
+}
+.ranking_tab li.on .txt_tab_genre6 {
+    background-position: -340px -320px;
+}
+.ranking_tab .txt_tab_age1 {
+    background-position: 0 -360px;
+    height: 28px;
+    margin-top: 19px;
+    width: 43px;
+}
+.ranking_tab .txt_tab_age2 {
+    background-position: -70px -360px;
+    height: 28px;
+    margin-top: 19px;
+    width: 59px;
+}
+.ranking_tab .txt_tab_age3 {
+    background-position: -140px -360px;
+    height: 28px;
+    margin-top: 19px;
+    width: 43px;
+}
+.ranking_tab .txt_tab_age4 {
+    background-position: -200px -360px;
+    height: 28px;
+    margin-top: 19px;
+    width: 59px;
+}
+.ranking_tab .txt_tab_age5 {
+    background-position: -270px -360px;
+    height: 28px;
+    margin-top: 19px;
+    width: 43px;
+}
+.ranking_tab .txt_tab_age6 {
+    background-position: -330px -360px;
+    height: 28px;
+    margin-top: 19px;
+    width: 59px;
+}
+.ranking_tab a:hover .txt_tab_age1 {
+    background-position: 0 -680px;
+}
+.ranking_tab a:hover .txt_tab_age2 {
+    background-position: -70px -680px;
+}
+.ranking_tab a:hover .txt_tab_age3 {
+    background-position: -140px -680px;
+}
+.ranking_tab a:hover .txt_tab_age4 {
+    background-position: -200px -680px;
+}
+.ranking_tab a:hover .txt_tab_age5 {
+    background-position: -270px -680px;
+}
+.ranking_tab a:hover .txt_tab_age6 {
+    background-position: -330px -680px;
+}
+.ranking_tab li.on .txt_tab_age1 {
+    background-position: 0 -400px;
+}
+.ranking_tab li.on .txt_tab_age2 {
+    background-position: -70px -400px;
+}
+.ranking_tab li.on .txt_tab_age3 {
+    background-position: -140px -400px;
+}
+.ranking_tab li.on .txt_tab_age4 {
+    background-position: -200px -400px;
+}
+.ranking_tab li.on .txt_tab_age5 {
+    background-position: -270px -400px;
+}
+.ranking_tab li.on .txt_tab_age6 {
+    background-position: -330px -400px;
+}
+.daily_section h3 a:hover .txt_mon {
+    background-position: -330px -530px;
+}
+.daily_section h3 a:hover .txt_tue {
+    background-position: -380px -530px;
+}
+.daily_section h3 a:hover .txt_wed {
+    background-position: -420px -530px;
+}
+.daily_section h3 a:hover .txt_thu {
+    background-position: -470px -530px;
+}
+.daily_section h3 a:hover .txt_fri {
+    background-position: -510px -530px;
+}
+.daily_section h3 a:hover .txt_sat {
+    background-position: -540px -530px;
+}
+.daily_section h3 a:hover .txt_sun {
+    background-position: -580px -530px;
+}
+.daily_section.on .txt_mon {
+    background-position: -40px -460px !important;
+}
+.daily_section.on .txt_tue {
+    background-position: -90px -460px !important;
+}
+.daily_section.on .txt_wed {
+    background-position: -130px -460px !important;
+}
+.daily_section.on .txt_thu {
+    background-position: -180px -460px !important;
+}
+.daily_section.on .txt_fri {
+    background-position: -220px -460px !important;
+}
+.daily_section.on .txt_sat {
+    background-position: -250px -460px !important;
+}
+.daily_section.on .txt_sun {
+    background-position: -290px -460px !important;
+}
+.cont_box .viewer_lst .spi_area .lnk_favorites.on .txt_favorites {
+    background-position: -520px -150px;
+}
+.challenge_cont_area .txt_rate {
+    background-position: -200px -880px;
+    height: 17px;
+    width: 105px;
+}
+.challenge_cont_area .txt_update {
+    background-position: -200px -900px;
+    height: 17px;
+    width: 93px;
+}
+.challenge_cont_area .txt_read_count {
+    background-position: -460px -1220px;
+    height: 17px;
+    width: 134px;
+}

@@ -4,13 +4,19 @@ from flask import render_template
 import json
 
 app = Flask(__name__)
+with open(r'/home/lotso/PycharmProjects/tog/tog/togspider_items.json') as json_data :
+        data = json.load(json_data)
 
+@app.route('/')
+def index():
+    eplist = [d['chaptertitle'][0] for d in data]
+    cleanEpList = sorted(set([int(ep) for ep in eplist]))
+    return render_template('index.html', title='Index of episodes', cleanEpList=cleanEpList)
 
 @app.route('/viewer/<int:episodeNo>')
 def viewer(episodeNo):
 
-    with open(r'C:\Users\bbarthelet\PycharmProjects\tog\tog\togspider_items.json') as json_data :
-        data = json.load(json_data)
+
     cccc = {d['pagenumber'][0]:d['images'][0]['path'] for d in data if d['chaptertitle'] == [str(episodeNo)]}
     sorted_cccc = sorted(cccc.items(), key=lambda x: x[0])
 
@@ -19,4 +25,4 @@ def viewer(episodeNo):
     return render_template('viewer.html', title='Viewing episodes', sorted_cccc=sorted_cccc, episode=episode)
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(host='0.0.0.0', debug=True)

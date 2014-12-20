@@ -8,12 +8,9 @@
 <body>
 <div id="toolbar" class="tool_area NE=a:vtb" style="display: block;">
     <div class="paginate v2">
-        <!--
-                        <a class="pg_prev NPI=a:prev,g:fr_en" title="Previous Episode" href="/viewer?titleNo=95&amp;episodeNo={{ episode[0] }}"><em>Previous Episode</em></a>
-                        <span class="tx _btnOpenEpisodeList NPI=a:current,g:fr_en">#{{ episode[1] }}</span>
-                        <a class="pg_next NPI=a:next,g:fr_en" title="Next Episode" href="/viewer?titleNo=95&amp;episodeNo={{ episode[2] }}"><em>Next Episode</em></a>
-        -->
+                        {% if episode[1]>0 %}
                         <a class="pg_prev NPI=a:prev,g:fr_en" title="Previous Episode" href="/viewer/{{ episode[0] }}"><em>Previous Episode</em></a>
+                        {% endif %}
                         <span class="tx _btnOpenEpisodeList NPI=a:current,g:fr_en">#{{ episode[1] }}</span>
                         <a class="pg_next NPI=a:next,g:fr_en" title="Next Episode" href="/viewer/{{ episode[2] }}"><em>Next Episode</em></a>
     </div>
